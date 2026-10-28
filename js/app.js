@@ -3,7 +3,7 @@
  * State persistence in LocalStorage, UI rendering, event handling.
  */
 
-const STORAGE_KEY = 'nuance_vocab_app_v1';
+const STORAGE_KEY = 'nuance_vocab_app_v2';
 
 const App = {
   state: {
@@ -29,6 +29,16 @@ const App = {
 
   loadState() {
     try {
+      // Automatic one-time progress reset requested by user
+      const resetFlag = localStorage.getItem('nuance_progress_reset_v5');
+      if (!resetFlag) {
+        localStorage.removeItem('nuance_vocab_app_v1');
+        localStorage.removeItem('nuance_vocab_app_v2');
+        localStorage.setItem('nuance_progress_reset_v5', 'true');
+        this.resetStateToZero();
+        return;
+      }
+
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
@@ -36,6 +46,30 @@ const App = {
       }
     } catch (e) {
       console.error('Error loading state:', e);
+    }
+  },
+
+  resetStateToZero() {
+    const theme = this.state.theme || 'dark';
+    this.state = {
+      currentPackId: 1,
+      currentWordIndex: 0,
+      learnedWords: {},
+      dailyMissions: {},
+      streak: 0,
+      lastActiveDate: null,
+      customWords: this.state.customWords || [],
+      theme: theme,
+      activeTab: 'daily'
+    };
+    this.saveState();
+  },
+
+  resetProgressConfirm() {
+    if (confirm("Reset all quiz answers, mastered words, and progress back to 0?")) {
+      this.resetStateToZero();
+      this.render();
+      alert("All context quizzes and progress have been reset to 0.");
     }
   },
 
@@ -55,20 +89,28 @@ const App = {
   checkStreak() {
     const today = this.getTodayString();
     if (!this.state.lastActiveDate) {
-      this.state.streak = 1;
-      this.state.lastActiveDate = today;
-    } else if (this.state.lastActiveDate !== today) {
-      const last = new Date(this.state.lastActiveDate);
-      const curr = new Date(today);
-      const diffDays = Math.round((curr - last) / (1000 * 60 * 60 * 24));
-      if (diffDays === 1) {
-        this.state.streak += 1;
-      } else if (diffDays > 1) {
-        this.state.streak = 1;
-      }
-      this.state.lastActiveDate = today;
+      // Clean slate: streak remains 0 until active study
+      this.state.streak = 0;
+      this.saveState();
+      return;
     }
-    this.saveState();
+    const last = new Date(this.state.lastActiveDate);
+    const curr = new Date(today);
+    const diffDays = Math.round((curr - last) / (1000 * 60 * 60 * 24));
+    if (diffDays > 1) {
+      this.state.streak = 0;
+      this.saveState();
+    }
+  },
+
+  recordActivity() {
+    const today = this.getTodayString();
+    if (this.state.lastActiveDate !== today) {
+      this.state.streak = (this.state.streak || 0) + 1;
+      this.state.lastActiveDate = today;
+      this.saveState();
+      this.renderHeader();
+    }
   },
 
   applyTheme() {
@@ -434,6 +476,7 @@ const App = {
     }
     this.state.learnedWords[word.id].drillAnswered = true;
     this.state.learnedWords[word.id].drillChosenIndex = chosenIndex;
+    this.recordActivity();
     this.saveState();
 
     this.showDrillResult(chosenIndex, correctIndex, explanation, true);
@@ -513,6 +556,9 @@ const App = {
       this.state.learnedWords[word.id] = {};
     }
     this.state.learnedWords[word.id].mastered = !this.state.learnedWords[word.id].mastered;
+    if (this.state.learnedWords[word.id].mastered) {
+      this.recordActivity();
+    }
     this.saveState();
     this.renderDailyWord();
   },
@@ -596,6 +642,7 @@ const App = {
       this.state.dailyMissions[today].splice(idx, 1);
     } else {
       this.state.dailyMissions[today].push(missionId);
+      this.recordActivity();
     }
     this.saveState();
     this.renderDailyMissions();
@@ -841,6 +888,9 @@ const App = {
         <div class="settings-btns-row">
           <button class="action-btn-secondary" onclick="App.exportData()">Export Data (JSON)</button>
           <button class="action-btn-secondary" onclick="App.showInstallHelp()">Install to Phone 📱</button>
+        </div>
+        <div class="settings-btns-row" style="margin-top: 8px;">
+          <button class="action-btn-secondary" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.35);" onclick="App.resetProgressConfirm()">Reset All Progress to 0% ↺</button>
         </div>
       </div>
     `;
