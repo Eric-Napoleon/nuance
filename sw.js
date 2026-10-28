@@ -3,7 +3,7 @@
  * Enables 100% offline functionality and instantaneous loads.
  */
 
-const CACHE_NAME = 'nuance-cache-v5';
+const CACHE_NAME = 'nuance-cache-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -13,7 +13,10 @@ const ASSETS_TO_CACHE = [
   './js/audio.js',
   './js/drills.js',
   './js/app.js',
-  './icons/icon.svg'
+  './icons/icon.svg',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {
