@@ -1,0 +1,20 @@
+{
+  "name": "Nuance - Daily Vocabulary",
+  "short_name": "Nuance",
+  "description": "Daily nuanced, sophisticated vocabulary for everyday conversation.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0d14",
+  "theme_color": "#0a0d14",
+  "categories": ["education", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
