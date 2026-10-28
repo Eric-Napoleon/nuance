@@ -319,7 +319,7 @@ const App = {
             <div class="drill-options" id="drill-options-container">
               ${word.practiceQuestion.options.map((opt, i) => `
                 <button class="drill-option-btn" onclick="App.handleDrillAnswer(${i})">
-                  <span class="opt-letter">${['A', 'B', 'C'][i]}</span>
+                  <span class="opt-letter">${['A', 'B', 'C', 'D', 'E'][i]}</span>
                   <span class="opt-text">${opt}</span>
                 </button>
               `).join('')}
@@ -966,9 +966,14 @@ const App = {
       missions: [`Use "${word}" in a sentence today.`],
       practiceQuestion: {
         scenario: `Practice using "${word}" in conversation:`,
-        options: [`Using ${word} accurately.`, `Incorrect context.`, `Arbitrary filler.`],
-        correctIndex: 0,
-        explanation: `${word}: ${def}`
+        options: [
+          `Applying "${word}" accurately in a fitting conversational context.`,
+          `Using "${word}" in an unrelated context with the opposite meaning.`,
+          `Using "${word}" as empty filler without clear intent.`,
+          `Confusing "${word}" with an unrelated soundalike phrase.`
+        ],
+        correctIndex: Math.floor(Math.random() * 4),
+        explanation: `"${word}" means: ${def}`
       },
       writingPrompt: `Write your own sentence using "${word}".`
     };

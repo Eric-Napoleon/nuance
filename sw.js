@@ -3,7 +3,7 @@
  * Enables 100% offline functionality and instantaneous loads.
  */
 
-const CACHE_NAME = 'nuance-cache-v3';
+const CACHE_NAME = 'nuance-cache-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

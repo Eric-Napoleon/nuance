@@ -26,14 +26,15 @@ const VOCAB_PACKS = [
           "Swap 'let's be realistic' with 'let's take a pragmatic look at this'."
         ],
         practiceQuestion: {
-          scenario: "Your friend wants to renovate their entire kitchen in two days before hosting a party. You tell them:",
+          scenario: "Your startup team is debating whether to rebuild their entire database from scratch or patch the current bug to launch before the competitor. A colleague urges an idealistic total rewrite that will delay launch by 4 months. You counter:",
           options: [
-            "That's a very pragmatic schedule.",
-            "That's simply not pragmatic given how long tile adhesive takes to cure.",
-            "You are being too pragmatic about dinner."
-          ],
-          correctIndex: 1,
-          explanation: "Pragmatic refers to practical feasibility. Two days is unrealistic, so it's *not* pragmatic."
+            "Rebuilding from scratch is far more pragmatic because it feels cleaner aesthetically.",
+            "We should be pragmatic and refuse to make any compromises on code perfection.",
+            "Let's be pragmatic: shipping on time keeps the company funded; we can refactor technical debt next quarter.",
+            "A pragmatic developer never considers timelines or commercial deadlines."
+],
+          correctIndex: 2,
+          explanation: "'Pragmatic' means prioritizing practical outcomes over theoretical perfection. Choosing to launch and survive financially is pragmatic; demanding perfection at all costs is the opposite."
         },
         writingPrompt: "Describe a decision you made recently where you had to balance what you wished would happen with what was actually pragmatic."
       },
@@ -53,14 +54,15 @@ const VOCAB_PACKS = [
           "Notice how tone of voice changes meaning in a phone call today."
         ],
         practiceQuestion: {
-          scenario: "You're reviewing a customer complaint and realize the client wasn't angry about the product itself, but how the policy was worded. You remark:",
+          scenario: "During a heated debate over remote work, one speaker argues 'remote workers are strictly lazier' and another insists 'remote work has zero drawbacks'. You intervene to say:",
           options: [
-            "We need to eliminate all nuance in our emails.",
-            "There's an important nuance here: the product worked, but our phrasing felt dismissive.",
-            "The client has zero nuance for our company."
-          ],
-          correctIndex: 1,
-          explanation: "Nuance highlights a crucial subtle distinction between two closely related things."
+            "This conversation lacks nuance—productivity depends heavily on role type, tenure, and individual autonomy.",
+            "There is too much nuance here; we need to make things far more ambiguous.",
+            "Nuance proves that one side is totally right and the other is totally wrong.",
+            "Let's avoid all nuance and look at the subtle details instead."
+],
+          correctIndex: 0,
+          explanation: "'Nuance' refers to subtle distinctions and complexities. Intervening to show that neither extreme is accurate captures the true definition of nuance."
         },
         writingPrompt: "Write one sentence about a topic where people often overlook the nuance (e.g., remote vs in-office work, diet trends, or movies)."
       },
@@ -80,14 +82,15 @@ const VOCAB_PACKS = [
           "Think of a habit that is no longer sustainable and call it 'untenable'."
         ],
         practiceQuestion: {
-          scenario: "Commuting three hours each way every day in heavy traffic has burned someone out. They say:",
+          scenario: "Your department is asked to take on 50% more clients without any hiring or budget increase. After three weeks, error rates surge and two senior engineers resign. In the retrospective, you state:",
           options: [
-            "This commute is completely tenable.",
-            "This daily commute is simply not tenable anymore.",
-            "I feel very tenable when driving."
-          ],
-          correctIndex: 1,
-          explanation: "'Not tenable' (or untenable) means it cannot be reasonably sustained."
+            "Our current operating workload is tenable because everyone is working over weekends.",
+            "If we remain tenable, we will likely lose even more team members next month.",
+            "The resignation of our engineers makes our staffing model much more tenable.",
+            "Absorbing this volume without additional headcount is simply not a tenable strategy."
+],
+          correctIndex: 3,
+          explanation: "'Tenable' means able to be defended, maintained, or sustained. An overloaded team losing staff is in an untenable state, so continuing that strategy is 'not tenable'."
         },
         writingPrompt: "Think about a project or lifestyle habit. Is it tenable for the next 12 months? Why or why not?"
       },
@@ -107,14 +110,15 @@ const VOCAB_PACKS = [
           "Mentally substitute 'delineate' when someone says 'can you outline that?'"
         ],
         practiceQuestion: {
-          scenario: "You are planning an event with two friends and want to avoid overlapping tasks. You say:",
+          scenario: "Two project managers are clashing because both are messaging the same clients and scheduling contradictory meetings. In a sync with leadership, the director announces:",
           options: [
-            "Let's delineate our individual responsibilities so nobody duplicates work.",
-            "Can you delineate this sandwich for me?",
-            "I'm feeling very delineated today."
-          ],
-          correctIndex: 0,
-          explanation: "'Delineate' means clearly outlining roles and boundaries."
+            "We must delineate our client list so that neither manager can access it anymore.",
+            "We need to clearly delineate roles: Sarah owns client onboarding, while David handles contract renewals.",
+            "Please delineate your anger so the team feels more enthusiastic.",
+            "Both managers are already fully delineated into a single unified position."
+],
+          correctIndex: 1,
+          explanation: "'Delineate' means to trace, outline, or describe clear boundaries. Setting separate boundaries for onboarding and renewals is the exact application."
         },
         writingPrompt: "Write a sentence delineating two different priorities you have for this month."
       },
@@ -134,14 +138,15 @@ const VOCAB_PACKS = [
           "Identify the single most salient lesson you learned yesterday."
         ],
         practiceQuestion: {
-          scenario: "After listening to an hour-long podcast with lots of trivia, your friend asks what actually mattered. You reply:",
+          scenario: "You review a 40-page technical proposal filled with background history, vendor biographies, and appendix tables. Your executive asks for the core takeaway in under two minutes. You begin:",
           options: [
-            "The salient point was that sleep quality directly affects morning focus.",
-            "All the audio ads were the salient part.",
-            "It was totally salient because it was loud."
-          ],
-          correctIndex: 0,
-          explanation: "'Salient' points to the core, most prominent insight."
+            "The salient part of the proposal is the list of fonts used in Appendix C.",
+            "The report is completely salient because it is forty pages long.",
+            "Every single sentence in the appendix is equally salient to our bottom line.",
+            "The most salient point is that migrating now cuts our server overhead by 35%."
+],
+          correctIndex: 3,
+          explanation: "'Salient' means the most prominent, important, or standout feature. Highlighting the 35% cost reduction addresses the most salient takeaway."
         },
         writingPrompt: "What is the most salient factor in your current career or personal goal right now?"
       },
@@ -161,14 +166,15 @@ const VOCAB_PACKS = [
           "Notice when someone chooses expediency over perfection."
         ],
         practiceQuestion: {
-          scenario: "A team decides to use duct tape on a temporary sign rather than ordering a new frame before the VIP arrives. That choice was:",
+          scenario: "An hour before an investor demo, the payment gateway test environment crashes. The lead engineer suggests hardcoding mock success responses for the slides rather than canceling the demo. That decision is:",
           options: [
-            "Expedient, though not a permanent solution.",
-            "Completely theoretical.",
-            "Highly tenable for the next decade."
-          ],
+            "Expedient for getting through the pitch, though it must be immediately replaced with real code tomorrow.",
+            "A deeply principled, long-term architectural benchmark for the company.",
+            "Completely inexpedient because it solves the immediate crisis in five minutes.",
+            "A salient proof that the backend is robust and production-ready."
+],
           correctIndex: 0,
-          explanation: "Expedient means fast and convenient in the moment to solve an immediate problem."
+          explanation: "'Expedient' describes an action that is convenient and practically useful in the moment, even if it cuts corners or sidesteps ideal standards."
         },
         writingPrompt: "Describe an expedient shortcut you rely on during busy mornings."
       },
@@ -188,14 +194,15 @@ const VOCAB_PACKS = [
           "Evaluate two route options for a weekend trip using 'viable'."
         ],
         practiceQuestion: {
-          scenario: "You're deciding whether to hike a mountain trail in pouring rain without rain gear. You conclude:",
+          scenario: "An entrepreneur proposes opening an ultra-luxury ski rental shop in a tropical beach town that never receives snow. An angel investor evaluates the business plan and concludes:",
           options: [
-            "It's a viable walk in the park.",
-            "Continuing up the slippery peak without gear is not a viable option.",
-            "The rain makes our boots very viable."
-          ],
+            "This is an extraordinarily viable model because nobody else has tried it.",
+            "Without any natural snow or refrigeration infrastructure, this is not a commercially viable venture.",
+            "The plan is viable because the founder is very passionate about skiing.",
+            "We should delineate the viability by ignoring all market geography."
+],
           correctIndex: 1,
-          explanation: "'Viable' means feasible and capable of succeeding safely."
+          explanation: "'Viable' means capable of working successfully or being sustained. A ski shop with zero snow lacks commercial viability."
         },
         writingPrompt: "What is one viable habit change you could adopt this week that takes less than 5 minutes a day?"
       },
@@ -215,14 +222,15 @@ const VOCAB_PACKS = [
           "Praise someone for handling sensitive news with 'great discretion'."
         ],
         practiceQuestion: {
-          scenario: "Your manager hands you a client gift budget and says you can pick whatever gifts you think fit best. She tells you:",
+          scenario: "A close friend confides in you about an upcoming confidential acquisition at their company before it is announced to the press. When a casual acquaintance asks what you know, you demonstrate discretion by:",
           options: [
-            "You have zero discretion here.",
-            "Use your discretion to choose appropriate gifts for each client.",
-            "Please delineate your discretion into the box."
-          ],
-          correctIndex: 1,
-          explanation: "'Use your discretion' means trust in your personal judgment to make the call."
+            "Posting a subtle hint about the stock ticker on social media.",
+            "Exercising discretion by demanding money in exchange for the secret.",
+            "Politely deflecting the inquiry and keeping the confidential details completely private.",
+            "Announcing that you have no discretion over your own thoughts."
+],
+          correctIndex: 2,
+          explanation: "'Discretion' in this social context means the quality of exercising tact, prudence, and keeping sensitive matters confidential."
         },
         writingPrompt: "Write a message giving someone permission to handle a task 'at their discretion'."
       },
@@ -242,14 +250,15 @@ const VOCAB_PACKS = [
           "Use 'benchmark' when comparing two options or past performances."
         ],
         practiceQuestion: {
-          scenario: "You read 20 pages every night and use that pace to gauge how fast you'll finish a 400-page book. That 20 pages is your:",
+          scenario: "Your marketing team wants to evaluate whether their 4.2% email click-through rate is impressive. They pull industry averages across 500 comparable SaaS businesses. That industry average serves as a:",
           options: [
-            "Benchmark pace.",
-            "Equivocal speed.",
-            "Delineated secret."
-          ],
+            "Benchmark against which they can realistically assess their campaign performance.",
+            "Tenable excuse for never optimizing their copy again.",
+            "Subjective nuance that carries zero analytical significance.",
+            "Specious distraction that prevents them from understanding email."
+],
           correctIndex: 0,
-          explanation: "A benchmark is a reference point used to evaluate progress or performance."
+          explanation: "'Benchmark' is a standard or reference point against which performance, quality, or metrics are measured."
         },
         writingPrompt: "Name someone who sets the benchmark for clear communication in your circle, and why."
       },
@@ -269,14 +278,15 @@ const VOCAB_PACKS = [
           "Reflect on a past situation that became untenable and how you resolved it."
         ],
         practiceQuestion: {
-          scenario: "A restaurant has 1 chef, 80 seats, and orders piling up for two hours with complaints everywhere. The manager says:",
+          scenario: "A logistics firm promises same-day delivery to a remote island with only one ferry per day. Packages are consistently 48 hours late and customer lawsuits are mounting. The head of operations reports:",
           options: [
-            "This kitchen setup is totally tenable.",
-            "This operational bottleneck is completely untenable.",
-            "Our menu is very nuanced."
-          ],
-          correctIndex: 1,
-          explanation: "'Untenable' describes a breakdown that cannot reasonably continue."
+            "Our promise is completely tenable and requires no operational adjustment.",
+            "We are tenable because our competitors cannot reach the island either.",
+            "Promising same-day delivery under current transport constraints is completely untenable.",
+            "The islanders are untenable for expecting their packages on time."
+],
+          correctIndex: 2,
+          explanation: "'Untenable' describes a position, claim, or operational condition that cannot be defended, sustained, or maintained in reality."
         },
         writingPrompt: "Write a sentence explaining why a 7-day work week is untenable for creative thinking."
       }
@@ -303,14 +313,15 @@ const VOCAB_PACKS = [
           "Notice what simple habits bolster your energy throughout the day."
         ],
         practiceQuestion: {
-          scenario: "You want to convince your partner to choose a particular vacation spot, so you show them reviews and a promo code. You are trying to:",
+          scenario: "During a board meeting, the CFO presents projections for expanding abroad, but directors express skepticism about currency risks. To convince them, the CFO:",
           options: [
-            "Bolster your recommendation.",
-            "Delineate your boredom.",
-            "Precipitate an argument."
-          ],
-          correctIndex: 0,
-          explanation: "'Bolster' means reinforcing or supporting your case with more proof or incentives."
+            "Undermines her forecast by admitting she did not research currency trends.",
+            "Brings in historical hedging data and third-party audit reports to bolster her argument.",
+            "Demurs from answering and insists numbers are not viable benchmarks.",
+            "Concedes that foreign expansion is completely untenable."
+],
+          correctIndex: 1,
+          explanation: "'Bolster' means to support, strengthen, or prop up an argument with evidence or backing."
         },
         writingPrompt: "What is one fact or experience you could use to bolster a hobby or skill you recommend to others?"
       },
@@ -330,14 +341,15 @@ const VOCAB_PACKS = [
           "Practice articulating a complex thought in one concise sentence."
         ],
         practiceQuestion: {
-          scenario: "Someone in a town hall meeting explains a complicated zoning law so clearly that everybody immediately understands. You tell your neighbor:",
+          scenario: "A scientist has made a breakthrough in renewable battery materials, but when interviewed on television, she speaks in dense chemical jargon that confuses viewers. Her communications coach notes:",
           options: [
-            "She's remarkably articulate on this topic.",
-            "She speaks in an untenable way.",
-            "Her points are very volatile."
-          ],
-          correctIndex: 0,
-          explanation: "Articulate means expressing ideas with exceptional clarity and fluency."
+            "She was too articulate; she should use more unpronounceable formulas.",
+            "She articulated her points so simply that everyone bought a battery.",
+            "Her data is tenable, but she cannot delineate any numbers.",
+            "She needs to articulate the real-world consumer benefits in clear, accessible language."
+],
+          correctIndex: 3,
+          explanation: "'Articulate' means expressing ideas fluently, clearly, and coherently so others easily understand them."
         },
         writingPrompt: "Articulate in two sentences why you want to expand your daily vocabulary."
       },
@@ -357,14 +369,15 @@ const VOCAB_PACKS = [
           "Strive to make your next feedback or proposal as cogent as possible."
         ],
         practiceQuestion: {
-          scenario: "A teammate presents data that disproves a popular rumor with five well-documented charts. Their presentation was:",
+          scenario: "A lawyer is defending a tenant in an eviction case. Rather than appealing to vague emotion, she presents signed lease addendums, bank wire receipts, and written city code violations. The judge notes:",
           options: [
-            "Specious and shaky.",
-            "Cogent and impossible to dismiss.",
-            "Too reticent to believe."
-          ],
-          correctIndex: 1,
-          explanation: "Cogent means intellectually compelling, well-founded, and clear."
+            "The defense presented a cogent and well-substantiated case that directly satisfied the legal standard.",
+            "The arguments were too cogent to be considered logical.",
+            "The tenant made an equivocal argument filled with unrelated emotional anecdotes.",
+            "The documents were expedient because they contained no facts."
+],
+          correctIndex: 0,
+          explanation: "'Cogent' describes an argument that is clear, logical, convincing, and backed by solid reasoning."
         },
         writingPrompt: "Write a short, cogent argument in favor of getting 8 hours of sleep."
       },
@@ -384,14 +397,15 @@ const VOCAB_PACKS = [
           "Check a source to see if another publication corroborates a news headline."
         ],
         practiceQuestion: {
-          scenario: "Two different witnesses describe the same license plate number of a fleeing car. The second witness:",
+          scenario: "An investigative journalist writes an exposé claiming a government official took unauthorized overseas flights. Before publishing, the editor insists on finding second sources. They only publish when:",
           options: [
-            "Corroborates the first witness's testimony.",
-            "Delineates the car's engine.",
-            "Is being equivocal about the scene."
-          ],
-          correctIndex: 0,
-          explanation: "'Corroborate' means to confirm or support a statement with independent evidence."
+            "The official denies the story on social media.",
+            "Anonymous commentators post rumors on an internet forum.",
+            "Flight manifests and timestamped hotel invoices corroborate the whistleblower's testimony.",
+            "The journalist promises to delineate a theoretical flight path."
+],
+          correctIndex: 2,
+          explanation: "'Corroborate' means to confirm, verify, or support a statement or claim with independent additional evidence."
         },
         writingPrompt: "Write a sentence where someone's personal experience corroborates a piece of advice."
       },
@@ -411,14 +425,15 @@ const VOCAB_PACKS = [
           "Aim for lucid explanations when answering questions today."
         ],
         practiceQuestion: {
-          scenario: "You read a guide on personal finance that explains compound interest using zero confusing jargon. The guide is:",
+          scenario: "After waking up from general anesthesia, a patient is asked basic questions about their name and location. Within ten minutes, they answer with sharp memory and zero confusion. The doctor notes:",
           options: [
-            "Lucid and accessible.",
-            "Specious and chaotic.",
-            "Untenable to follow."
-          ],
-          correctIndex: 0,
-          explanation: "'Lucid' means crystal-clear and effortless to grasp."
+            "The patient remains deeply equivocal and bewildered.",
+            "The patient is fully lucid, alert, and oriented in all spheres.",
+            "The anesthesia made their speech completely untenable.",
+            "Their answers were expedient rather than honest."
+],
+          correctIndex: 1,
+          explanation: "'Lucid' means clear-headed, easily understood, and possessing rational, coherent thinking."
         },
         writingPrompt: "Write a one-sentence lucid explanation of what your current job or main hobby entails."
       },
@@ -438,14 +453,15 @@ const VOCAB_PACKS = [
           "Identify an instance where being unequivocal is better than equivocal."
         ],
         practiceQuestion: {
-          scenario: "A politician is asked if taxes will rise and answers: 'We will review all necessary levers at appropriate junctures.' That answer was:",
+          scenario: "A politician is asked point-blank whether she plans to vote for a tax increase. She replies: 'I believe we must always remain open to fiscally prudent adjustments when the circumstances dictate.' A reporter remarks:",
           options: [
-            "Unequivocal and clear.",
-            "Equivocal and deliberately evasive.",
-            "Pragmatic and concise."
-          ],
-          correctIndex: 1,
-          explanation: "'Equivocal' describes language that avoids a direct stance or is deliberately ambiguous."
+            "She gave a lucid and definitive 'no'.",
+            "Her answer was wonderfully candid and left zero doubt.",
+            "She delineated the tax rates down to the exact percentage.",
+            "Her equivocal response deliberately avoided taking a firm commitment."
+],
+          correctIndex: 3,
+          explanation: "'Equivocal' means open to multiple interpretations, deliberately ambiguous, or vague in order to avoid commitment."
         },
         writingPrompt: "Describe a situation where someone gave an equivocal response and what you did next."
       },
@@ -465,14 +481,15 @@ const VOCAB_PACKS = [
           "Notice when someone might have misconstrued a text message."
         ],
         practiceQuestion: {
-          scenario: "You tell someone you're skipping their weekend party to catch up on sleep, and you want to be sure they don't think you're mad at them. You say:",
+          scenario: "You text a colleague 'Thanks for your input' with a period at the end. Because text lacks voice inflection, the colleague thinks you were being passive-aggressive. In follow-up, you explain:",
           options: [
-            "Don't construe my absence as anything personal—I just need rest.",
-            "I am delineating your party.",
-            "My attendance is an equivocal benchmark."
-          ],
-          correctIndex: 0,
-          explanation: "'Construe' means to interpret an action or words in a specific way."
+            "I was being disingenuous about your input.",
+            "My message was an expedient attack on your character.",
+            "I didn't intend for you to construe my short message as hostility; I was genuinely thankful.",
+            "Please corroborate my punctuation before replying."
+],
+          correctIndex: 2,
+          explanation: "'Construe' means to interpret or deduce the meaning of words or actions in a particular way."
         },
         writingPrompt: "Write a clarification starting with: 'Please don't construe my question as skepticism, but...'"
       },
@@ -492,14 +509,15 @@ const VOCAB_PACKS = [
           "Say 'To be completely candid...' instead of 'TBH' or 'Honestly speaking'."
         ],
         practiceQuestion: {
-          scenario: "Your close friend asks if their resume font looks childish, and you give them gentle but direct advice to switch to a classic serif. You were being:",
+          scenario: "A founder asks an experienced advisor for honest feedback on their pitch deck before meeting venture capitalists. The advisor says: 'I like you too much to sugarcoat this—slide 4 is contradictory and your financial model makes no sense.' The founder appreciates this because:",
           options: [
-            "Untenable.",
-            "Candid and constructive.",
-            "Equivocal and evasive."
-          ],
-          correctIndex: 1,
-          explanation: "'Candid' means straightforward and sincere without hidden agendas."
+            "She received candid, actionable truth rather than polite, useless flattery.",
+            "The advisor was acting in an equivocal and diplomatic manner.",
+            "Candid advisors always praise your mistakes.",
+            "The criticism was too subtle to contain any salient feedback."
+],
+          correctIndex: 0,
+          explanation: "'Candid' means straightforward, frank, and sincerely honest without diplomatic varnish or deceit."
         },
         writingPrompt: "Give a candid self-assessment of your strongest conversational skill and what you want to improve."
       },
@@ -519,14 +537,15 @@ const VOCAB_PACKS = [
           "Notice how sensory details make your own stories more evocative."
         ],
         practiceQuestion: {
-          scenario: "A melody in an old movie instantly makes you picture your grandmother's living room on Sunday mornings. That music is:",
+          scenario: "A travel writer describes the scent of roasted chestnuts on a damp Paris morning, the echo of church bells over cobblestones, and the crisp autumn wind. Readers describe the prose as:",
           options: [
-            "Evocative.",
-            "Expedient.",
-            "Untenable."
-          ],
-          correctIndex: 0,
-          explanation: "'Evocative' means powerfully awakening specific memories, sights, or emotions."
+            "Untenable and confusing to read.",
+            "Pragmatic and strictly technical.",
+            "Expedient because it lacked words.",
+            "Powerfully evocative, bringing vivid sensory memories to mind."
+],
+          correctIndex: 3,
+          explanation: "'Evocative' means bringing strong, vivid images, feelings, or memories into the reader's consciousness."
         },
         writingPrompt: "Write a sentence describing an aroma or sound that is deeply evocative for you."
       },
@@ -546,14 +565,15 @@ const VOCAB_PACKS = [
           "Recognize when someone makes a conciliatory remark and accept it with grace."
         ],
         practiceQuestion: {
-          scenario: "After a tense argument over chores, your roommate leaves your favorite pastry on the counter with a smiley face note. That gesture was:",
+          scenario: "Two business partners are threatening to sue each other over a dissolved partnership. Instead of sending another hostile legal demand letter, one partner offers to sit down over dinner and waive disputed filing fees. This gesture is:",
           options: [
-            "Conciliatory.",
-            "Specious.",
-            "Equivocal."
-          ],
-          correctIndex: 0,
-          explanation: "A conciliatory action aims to calm friction, repair goodwill, and restore harmony."
+            "Dogmatic and uncompromising.",
+            "Conciliatory, aimed at reducing animosity and encouraging a peaceful settlement.",
+            "A salient attempt to exacerbate the litigation.",
+            "Completely equivocal with zero intention of resolving anything."
+],
+          correctIndex: 1,
+          explanation: "'Conciliatory' describes an action intended to placate, soothe hostility, or reconcile conflicting parties."
         },
         writingPrompt: "Write a short, conciliatory response you could send after a minor miscommunication."
       }
@@ -580,14 +600,15 @@ const VOCAB_PACKS = [
           "Use 'galvanize' when talking about rallying friends or colleagues."
         ],
         practiceQuestion: {
-          scenario: "A community notices their local park is covered in trash, and within 24 hours 100 neighbors organize a cleanup drive. The litter problem:",
+          scenario: "Following a sudden cybersecurity breach that exposed client emails, the CEO gathers all company staff to announce a mandatory two-factor rollout and security overhaul by tomorrow morning. Her urgent speech was intended to:",
           options: [
-            "Galvanized the neighborhood into action.",
-            "Delineated the park's grass.",
-            "Made the neighborhood reticent."
-          ],
+            "Galvanize the organization into immediate, decisive collective action.",
+            "Substantiate that security risks are purely theoretical.",
+            "Understate the breach so nobody takes it seriously.",
+            "Act as an equivocal reminder that passwords are optional."
+],
           correctIndex: 0,
-          explanation: "'Galvanize' means to spur a group into rapid, energetic action."
+          explanation: "'Galvanize' means to shock, excite, or stimulate someone into immediate, purposeful action."
         },
         writingPrompt: "What is an ambition you have that could be galvanized by setting a public deadline?"
       },
@@ -607,14 +628,15 @@ const VOCAB_PACKS = [
           "Use 'catalyst' when explaining why a major life shift began."
         ],
         practiceQuestion: {
-          scenario: "A quiet programmer shares a quick script that automates a boring daily spreadsheet, sparking the whole office to rethink their tools. That script was a:",
+          scenario: "A local neighborhood had struggled with heavy traffic for years without municipal action. When a high-profile documentary showed children unable to cross safely, the mayor signed a traffic-calming bill within 48 hours. The documentary acted as a:",
           options: [
-            "Catalyst for modernization.",
-            "Conciliatory gesture.",
-            "Specious illusion."
-          ],
-          correctIndex: 0,
-          explanation: "A catalyst initiates and speeds up wider transformation."
+            "Conciliatory apology from the mayor.",
+            "Benchmark of how slow local government operates.",
+            "Catalyst that accelerated political action and broke through years of delay.",
+            "Discretionary guideline for future generations."
+],
+          correctIndex: 2,
+          explanation: "'Catalyst' refers to an agent, event, or person that precipitates or significantly accelerates change."
         },
         writingPrompt: "Write about a small moment that turned out to be a major catalyst in your life."
       },
@@ -634,14 +656,15 @@ const VOCAB_PACKS = [
           "Explain how a simple preparation mitigates an inconvenience."
         ],
         practiceQuestion: {
-          scenario: "You back up your phone before doing a major software update in case something crashes. You did that to:",
+          scenario: "A factory realizes their cooling tower produces excessive humming noise that irritates nearby homeowners. To prevent neighborhood backlash, they install acoustic baffle walls and plant dense evergreen trees along the perimeter. These steps were taken to:",
           options: [
-            "Mitigate the risk of data loss.",
-            "Galvanize your battery life.",
-            "Construe the new features."
-          ],
-          correctIndex: 0,
-          explanation: "'Mitigate' means taking proactive steps to diminish potential harm or loss."
+            "Precipitate an immediate lawsuit from the city.",
+            "Mitigate the acoustic disturbance and reduce tension with residents.",
+            "Articulate the sound across a wider geographic radius.",
+            "Exacerbate the noise levels during evening hours."
+],
+          correctIndex: 1,
+          explanation: "'Mitigate' means to make something bad or unpleasant less severe, intense, or harmful."
         },
         writingPrompt: "What is one proactive habit you use to mitigate stress during busy weeks?"
       },
@@ -661,14 +684,15 @@ const VOCAB_PACKS = [
           "Catch yourself before taking an action that might exacerbate tension."
         ],
         practiceQuestion: {
-          scenario: "A car has squeaking brakes, and driving it through mud and gravel every day makes the grinding sound twice as loud. That driving:",
+          scenario: "A manager notices two team members bickering over code reviews. Instead of speaking to them privately, the manager calls a surprise all-hands meeting and publicly ridicules their disagreements. The team observes that this intervention:",
           options: [
-            "Exacerbated the brake problem.",
-            "Mitigated the wear and tear.",
-            "Corroborated the wheels."
-          ],
-          correctIndex: 0,
-          explanation: "'Exacerbate' means making an already bad condition significantly worse."
+            "Mitigated the team's interpersonal friction immediately.",
+            "Delineated the dispute into peaceful collaboration.",
+            "Was a lucid example of diplomatic leadership.",
+            "Exacerbated the conflict, turning a minor tiff into widespread resentment."
+],
+          correctIndex: 3,
+          explanation: "'Exacerbate' means to make a problem, conflict, or negative condition substantially worse."
         },
         writingPrompt: "Write a sentence describing how poor communication can exacerbate a minor misunderstanding."
       },
@@ -688,14 +712,15 @@ const VOCAB_PACKS = [
           "Remind yourself that temporary frustrations are merely fleeting."
         ],
         practiceQuestion: {
-          scenario: "A stunning golden sunset lights up the sky for exactly four minutes before darkness falls. The display was:",
+          scenario: "You are standing on a hilltop at sunset. For roughly 45 seconds, the clouds turn brilliant violet and gold before plunging into twilight. You reflect that the beauty was:",
           options: [
-            "Fleeting but unforgettable.",
-            "Untenable and harsh.",
-            "A pragmatic view."
-          ],
-          correctIndex: 0,
-          explanation: "'Fleeting' describes something exquisite or transient that disappears quickly."
+            "Enduring and permanently etched across the midnight sky.",
+            "Tenable because it was documented in a contract.",
+            "Fleeting, lasting only a brief, transient moment before fading.",
+            "An expedient solution to nightfall."
+],
+          correctIndex: 2,
+          explanation: "'Fleeting' describes something that lasts for only a very short, transient period of time."
         },
         writingPrompt: "Reflect on a fleeting moment today that you appreciated before it passed."
       },
@@ -715,14 +740,15 @@ const VOCAB_PACKS = [
           "Identify an unpredictability in life that requires flexibility."
         ],
         practiceQuestion: {
-          scenario: "A restaurant owner changes the menu every two days based purely on whatever random recipe video popped up on their feed that morning. Their management is:",
+          scenario: "A software client changes their mind every single morning: on Monday they demand a dark blue theme, on Tuesday they demand lime green, and on Wednesday they cancel the feature altogether. The product designer complains:",
           options: [
-            "Capricious.",
-            "Pragmatic.",
-            "Conciliatory."
-          ],
+            "Their capricious decision-making makes long-term sprint planning impossible.",
+            "They have a very cogent and disciplined engineering roadmap.",
+            "The client is remarkably dispassionate and predictable.",
+            "Their feedback is tenable because it never changes."
+],
           correctIndex: 0,
-          explanation: "'Capricious' means governed by sudden, arbitrary impulses."
+          explanation: "'Capricious' means given to sudden, unpredictable, and unaccountable changes of mood, opinion, or behavior."
         },
         writingPrompt: "Write a sentence contrasting a reliable friend with a capricious acquaintance."
       },
@@ -742,14 +768,15 @@ const VOCAB_PACKS = [
           "De-escalate a volatile tone in a group discussion."
         ],
         practiceQuestion: {
-          scenario: "Stock prices swinging up 12% in the morning and crashing 15% by afternoon are experiencing:",
+          scenario: "During an unprecedented geopolitical standoff, the price of crude oil swings by 18% up and down every two hours. An investment analyst cautions clients that the energy sector is currently:",
           options: [
-            "High volatility (volatile behavior).",
-            "A tenable stability.",
-            "A conciliatory trend."
-          ],
-          correctIndex: 0,
-          explanation: "'Volatile' characterizes sudden, sharp, and erratic fluctuations."
+            "Completely static and invulnerable to world news.",
+            "Too pragmatic to be affected by market sentiment.",
+            "An unassuming and steady place to store emergency cash.",
+            "Extremely volatile and prone to sudden, violent financial swings."
+],
+          correctIndex: 3,
+          explanation: "'Volatile' means liable to change rapidly, violently, and unpredictably, especially for the worse."
         },
         writingPrompt: "Write a sentence offering advice on how to stay calm when a situation turns volatile."
       },
@@ -769,14 +796,15 @@ const VOCAB_PACKS = [
           "Distinguish between a passing fad and an enduring trend."
         ],
         practiceQuestion: {
-          scenario: "A classic book written 80 years ago still sells millions of copies and resonates with teenage readers today. It has:",
+          scenario: "While many viral tech startups flame out within eighteen months, a century-old fountain pen maker continues to post steady profits through craftsmanship and customer loyalty. The brand demonstrates:",
           options: [
-            "Enduring relevance.",
-            "An expedient lifespan.",
-            "An equivocal reputation."
-          ],
-          correctIndex: 0,
-          explanation: "'Enduring' means retaining vitality and worth across extended time."
+            "A fleeting grasp on the stationery market.",
+            "Enduring relevance and quality that withstands temporary consumer fads.",
+            "A volatile business model that changes weekly.",
+            "Expedient shortcuts that diminish durability."
+],
+          correctIndex: 1,
+          explanation: "'Enduring' means continuing or long-lasting through time, adversity, and changing conditions."
         },
         writingPrompt: "What is one enduring lesson your parents or mentors taught you?"
       },
@@ -796,14 +824,15 @@ const VOCAB_PACKS = [
           "Use a 2-minute rule to break physical or mental inertia."
         ],
         practiceQuestion: {
-          scenario: "A company continues printing 50-page paper catalogs every week just because 'that's how we've always done it', even though nobody reads them. That is an example of:",
+          scenario: "A 50,000-employee enterprise still requires paper expense receipts submitted via postal mail because 'that's how we've handled bookkeeping since 1984.' A management consultant identifies this as organizational:",
           options: [
-            "Institutional inertia.",
-            "A pragmatic pivot.",
-            "A fleeting impulse."
-          ],
+            "Inertia—an unwillingness or systemic resistance to change established motion.",
+            "Discretion—a nimble and flexible approach to finance.",
+            "Astuteness—a cutting-edge strategic advantage over rivals.",
+            "Eloquence—a beautifully expressed operational strategy."
+],
           correctIndex: 0,
-          explanation: "Inertia is the natural resistance to changing an existing pattern or motion."
+          explanation: "'Inertia' in business or personal habits refers to a tendency to remain unchanged or resist reform."
         },
         writingPrompt: "Write about a small trick you use to overcome mental inertia when tackling hard tasks."
       },
@@ -823,14 +852,15 @@ const VOCAB_PACKS = [
           "Avoid rash decisions that might precipitate unnecessary stress."
         ],
         practiceQuestion: {
-          scenario: "A sudden power outage across three server centers unexpectedly triggered an emergency company-wide shutdown. The outage:",
+          scenario: "A bank abruptly raises interest rates by 4% overnight while simultaneously freezing commercial credit lines. Economists warn this sudden move will:",
           options: [
-            "Precipitated the shutdown.",
-            "Bolstered the server speeds.",
-            "Corroborated the power grid."
-          ],
-          correctIndex: 0,
-          explanation: "'Precipitate' means to cause a sudden, consequential event to occur."
+            "Mitigate the danger of bank runs.",
+            "Act as an enduring proof of monetary stability.",
+            "Galvanize the public to ignore currency altogether.",
+            "Precipitate an acute liquidity crisis across regional businesses."
+],
+          correctIndex: 3,
+          explanation: "'Precipitate' means to cause an undesirable event or crisis to happen suddenly, unexpectedly, or prematurely."
         },
         writingPrompt: "Describe an event that precipitated an unexpected change in your routine."
       }
@@ -857,14 +887,15 @@ const VOCAB_PACKS = [
           "Pay close attention to body language today and make an astute observation."
         ],
         practiceQuestion: {
-          scenario: "A negotiator notices a slight pause in the seller's voice when discussing delivery dates and realizes delivery speed is their hidden weakness. That negotiator made an:",
+          scenario: "During salary negotiations, a candidate notices that the hiring manager repeatedly brings up quarterly retention bonuses rather than base pay. Guessing the firm has tight base budgets but loose bonus reserves, she asks for a double retention bonus and gets it immediately. Her observation was:",
           options: [
-            "Astute deduction.",
-            "Equivocal blunder.",
-            "Untenable assumption."
-          ],
-          correctIndex: 0,
-          explanation: "Astute means keenly perceptive and quick to spot tactical details."
+            "Capricious and impulsive.",
+            "Equivocal and lacking any direction.",
+            "Disingenuous and completely incorrect.",
+            "Astute, demonstrating sharp judgment and mental discernment."
+],
+          correctIndex: 3,
+          explanation: "'Astute' means having or showing sharp shrewdness, discernment, and an ability to accurately assess situations."
         },
         writingPrompt: "Write about an astute observation you made recently about someone's unspoken preference."
       },
@@ -884,14 +915,15 @@ const VOCAB_PACKS = [
           "Apply a discerning eye to your shopping or media consumption today."
         ],
         practiceQuestion: {
-          scenario: "A food critic immediately notices when an Italian restaurant uses authentic Sicilian olive oil versus generic vegetable blends. She has a:",
+          scenario: "While casual coffee drinkers cannot tell the difference between supermarket instant coffee and a single-origin Ethiopian roast, a seasoned barista immediately pinpoints notes of jasmine and bergamot. The barista has a:",
           options: [
-            "Discerning palate.",
-            "Capricious tongue.",
-            "Fleeting taste."
-          ],
-          correctIndex: 0,
-          explanation: "'Discerning' highlights refined discrimination between subtle quality differences."
+            "Fastidious hatred of hot water.",
+            "Discerning palate that detects subtle quality differences others overlook.",
+            "Volatile stomach that rejects all beverages.",
+            "Tacit agreement with supermarket brands."
+],
+          correctIndex: 1,
+          explanation: "'Discerning' means having or revealing keen insight, refined taste, and good judgment."
         },
         writingPrompt: "In what area of your life (music, coffee, tools, books) are you most discerning?"
       },
@@ -911,14 +943,15 @@ const VOCAB_PACKS = [
           "Notice when being reticent in a conversation is wiser than oversharing."
         ],
         practiceQuestion: {
-          scenario: "When asked about the secret recipe, the chef smiled warmly but politely changed the subject. The chef was:",
+          scenario: "At dinner parties, Marcus listens intently and nods warmly, but when conversation turns to his personal romantic life or family finances, he smiles politely and redirects the topic. His friends know he is naturally:",
           options: [
-            "Reticent on the subject.",
-            "Exacerbating the kitchen.",
-            "Being completely tenable."
-          ],
-          correctIndex: 0,
-          explanation: "'Reticent' means intentionally reserved and disinclined to disclose information."
+            "Dogmatic about telling everyone his secrets.",
+            "Gregarious to the point of exhausting the room.",
+            "Reticent about private matters, preferring not to volunteer personal details.",
+            "Specious and untrustworthy in all settings."
+],
+          correctIndex: 2,
+          explanation: "'Reticent' describes someone who is not revealing thoughts, feelings, or personal details readily; reserved."
         },
         writingPrompt: "Describe a topic about which you are naturally reticent in casual social settings."
       },
@@ -938,14 +971,15 @@ const VOCAB_PACKS = [
           "Embrace a moment of gregarious energy today by striking up a chat with someone new."
         ],
         practiceQuestion: {
-          scenario: "Your cousin loves throwing huge 40-person backyard barbecues and chatting with strangers in elevator lobbies. He is:",
+          scenario: "Unlike her twin brother who thrives in quiet solitude writing software, Clara lights up in crowded rooms, chats easily with strangers in checkout lines, and organizes weekly block parties. Clara is distinctly:",
           options: [
-            "Gregarious.",
-            "Reticent.",
-            "Circumspect."
-          ],
+            "Gregarious, drawing genuine energy and joy from social gatherings.",
+            "Reticent and terrified of human interaction.",
+            "Circumspect when greeting her neighbors.",
+            "Enduringly cynical about society."
+],
           correctIndex: 0,
-          explanation: "'Gregarious' means naturally enthusiastic about social interaction and crowds."
+          explanation: "'Gregarious' describes a person who is fond of company, outgoing, and warmly sociable."
         },
         writingPrompt: "Are you more reticent or gregarious in large gatherings? Explain in two sentences."
       },
@@ -965,14 +999,15 @@ const VOCAB_PACKS = [
           "Use 'tacit approval' or 'tacit consent' when analyzing a team decision."
         ],
         practiceQuestion: {
-          scenario: "Whenever you and your partner go to movies, you hold the tickets and they buy the popcorn—you've never formally discussed it, but you've done it for 5 years. That is a:",
+          scenario: "In a long-standing creative partnership, one animator sketches while the other shades. They never speak aloud about deadlines or assign scenes, yet neither ever misses a beat. They operate with a:",
           options: [
-            "Tacit agreement.",
-            "Capricious mandate.",
-            "Specious policy."
-          ],
-          correctIndex: 0,
-          explanation: "'Tacit' describes an understanding that is mutually recognized without being verbally declared."
+            "Disingenuous mistrust of each other's talents.",
+            "Tacit understanding built from years of intuitive collaboration.",
+            "Specious contract that neither obeys.",
+            "Volatile hatred of verbal communication."
+],
+          correctIndex: 1,
+          explanation: "'Tacit' means understood or implied without being stated aloud; unspoken agreement."
         },
         writingPrompt: "What is an unspoken tacit rule people follow in your favorite coffee shop or gym?"
       },
@@ -992,14 +1027,15 @@ const VOCAB_PACKS = [
           "Describe a calculated, careful pause as circumspect."
         ],
         practiceQuestion: {
-          scenario: "Before investing his life savings in a new crypto startup, Marcus hires a financial advisor and reads three audit reports. He is being:",
+          scenario: "A venture capitalist is offered shares in an unverified offshore crypto protocol promising guaranteed 90% annual returns. Rather than leaping in, she spends three weeks auditing smart contracts and vetting the founders' backgrounds. Her approach is:",
           options: [
-            "Circumspect.",
-            "Gregarious.",
-            "Precipitate."
-          ],
-          correctIndex: 0,
-          explanation: "'Circumspect' implies carefully considering all risks and potential consequences."
+            "Capricious and recklessly impulsive.",
+            "Unassuming to the point of financial ruin.",
+            "Extrinsic and irrelevant to modern investing.",
+            "Circumspect, exercising cautious prudence before taking on risk."
+],
+          correctIndex: 3,
+          explanation: "'Circumspect' means wary, unwilling to take unnecessary risks, and cautiously prudent."
         },
         writingPrompt: "Describe a decision where being circumspect saved you from a headache."
       },
@@ -1019,14 +1055,15 @@ const VOCAB_PACKS = [
           "Distinguish between what is possible vs what is actually plausible."
         ],
         practiceQuestion: {
-          scenario: "Someone claims they were late because an alien spaceship blocked the freeway. Is that explanation:",
+          scenario: "When an employee arrives 40 minutes late, he claims an overturned water truck closed the highway bridge. The manager checks traffic maps, confirms the bridge was indeed blocked until 8:50 AM, and finds his excuse:",
           options: [
-            "Plausible.",
-            "Implausible (not plausible).",
-            "Tacit."
-          ],
-          correctIndex: 1,
-          explanation: "An alien blocking the freeway defies reason and credibility, making it completely implausible."
+            "Plausible and well-corroborated by objective real-time reports.",
+            "Wholly specious and obviously fabricated.",
+            "Too articulate to be honest.",
+            "An untenable paradox that defies the laws of physics."
+],
+          correctIndex: 0,
+          explanation: "'Plausible' means reasonable, believable, and probable given the surrounding facts."
         },
         writingPrompt: "Provide a plausible explanation for why a package arrived two days later than expected."
       },
@@ -1046,14 +1083,15 @@ const VOCAB_PACKS = [
           "Identify an activity where being fastidious is an undeniable advantage."
         ],
         practiceQuestion: {
-          scenario: "A watchmaker uses tweezers under a magnifying loupe to position a 0.5-millimeter gear with absolute exactness. The watchmaker is:",
+          scenario: "Before submitting an architectural blueprint to city inspectors, the lead draftsman checks every millimeter measurement, cross-verifies all egress codes, and repolishes line weights three times. Colleagues admire her:",
           options: [
-            "Fastidious in their craftsmanship.",
-            "Volatile in their work.",
-            "Equivocal about time."
-          ],
-          correctIndex: 0,
-          explanation: "'Fastidious' describes extreme care, precision, and devotion to minute details."
+            "Equivocal attitude toward building safety.",
+            "Volatile approach to drafting standards.",
+            "Fastidious attention to detail and zero tolerance for sloppy errors.",
+            "Fleeting interest in building stability."
+],
+          correctIndex: 2,
+          explanation: "'Fastidious' means very attentive to and concerned about accuracy, order, and meticulous detail."
         },
         writingPrompt: "In what hobby or chore are you most fastidious, and why?"
       },
@@ -1073,14 +1111,15 @@ const VOCAB_PACKS = [
           "Notice an unassuming spot in your city that punches well above its weight."
         ],
         practiceQuestion: {
-          scenario: "A world-renowned pianist walks into a rehearsal wearing jeans and a faded sweater, treating the stagehands with the exact same warmth as the conductor. The pianist is:",
+          scenario: "Despite having won an Olympic gold medal and built a nine-figure technology company, Elena wears plain t-shirts, drives a ten-year-old sedan, and never brags at dinner gatherings. People find her refreshingly:",
           options: [
-            "Unassuming.",
-            "Untenable.",
-            "Fastidious and haughty."
-          ],
-          correctIndex: 0,
-          explanation: "'Unassuming' describes someone who is genuinely unpretentious and modest despite great achievements."
+            "Dogmatic about her athletic greatness.",
+            "Unassuming, carrying immense accomplishment without arrogance or pretense.",
+            "Specious and manipulative in her modesty.",
+            "Untenable and socially aggressive."
+],
+          correctIndex: 1,
+          explanation: "'Unassuming' means modest, humble, and not pretentious or arrogant despite success."
         },
         writingPrompt: "Write about an unassuming mentor or colleague who made a lasting impression on you."
       },
@@ -1100,14 +1139,15 @@ const VOCAB_PACKS = [
           "Use 'empathetic listener' to describe a supportive friend."
         ],
         practiceQuestion: {
-          scenario: "When a colleague confides that they are overwhelmed with elderly parent care, you listen actively, validate their exhaustion, and don't dismiss their stress. You are being:",
+          scenario: "When a coworker bursts into tears after losing a beloved family pet, a colleague doesn't say 'it was just an animal' or give generic advice. Instead, he listens with warmth, validates her grief, and covers her afternoon shift. He shows he is deeply:",
           options: [
-            "Empathetic.",
-            "Expedient.",
-            "Taciturn."
-          ],
+            "Empathetic, possessing the emotional capacity to share and understand another's pain.",
+            "Circumspect about workplace productivity.",
+            "Dispassionate and cold toward human sentiment.",
+            "Expedient in avoiding conversations."
+],
           correctIndex: 0,
-          explanation: "Empathy involves genuinely sharing and understanding another's emotional experience."
+          explanation: "'Empathetic' means having and showing the ability to understand, share, and honor the feelings of another."
         },
         writingPrompt: "Write a sentence showing empathetic validation to someone who just had a rough day."
       }
@@ -1134,14 +1174,15 @@ const VOCAB_PACKS = [
           "Identify the quintessential movie or song of your teenage years."
         ],
         practiceQuestion: {
-          scenario: "A friend serves afternoon tea with warm scones, clotted cream, and strawberry jam in vintage porcelain cups in a cottage garden. It was the:",
+          scenario: "A film student writes an analysis of a classic noir film featuring rain-slicked city alleys, fedora-wearing detectives in trench coats, voiceover cynicism, and cigarette smoke cut by Venetian blind shadows. She argues the film is the:",
           options: [
-            "Quintessential British afternoon tea.",
-            "Untenable British breakfast.",
-            "Expedient British snack."
-          ],
-          correctIndex: 0,
-          explanation: "'Quintessential' captures the purest, archetypal embodiment of a cultural experience or concept."
+            "Fleeting outlier of detective cinema.",
+            "Superficial imitation that got every trope wrong.",
+            "Quintessential film noir, embodying the purest and most defining traits of the genre.",
+            "Arbitrary experiment with zero historical influence."
+],
+          correctIndex: 2,
+          explanation: "'Quintessential' represents the most perfect, typical, or classic embodiment of a particular quality or category."
         },
         writingPrompt: "What is your idea of the quintessential lazy Sunday?"
       },
@@ -1161,14 +1202,15 @@ const VOCAB_PACKS = [
           "Use 'ubiquitous' in a conversation about modern habits."
         ],
         practiceQuestion: {
-          scenario: "You travel across three continents and see people in every airport using the exact same water bottle brand. That water bottle has become:",
+          scenario: "Walking down city streets in Tokyo, London, or New York, you see neon signs for smartphone charging cables, wireless earbuds in every commuter's ears, and QR codes at every cash register. Wireless tech has become:",
           options: [
-            "Ubiquitous.",
-            "Reticent.",
-            "Specious."
-          ],
+            "Ubiquitous, present and visible virtually everywhere in modern daily life.",
+            "A reticent subculture known only to engineers.",
+            "An anomaly that few citizens ever encounter.",
+            "Plausible only in science fiction novels."
+],
           correctIndex: 0,
-          explanation: "'Ubiquitous' means universally encountered in nearly all environments."
+          explanation: "'Ubiquitous' means present, appearing, or encountered everywhere at once; omnipresent."
         },
         writingPrompt: "Write about a technology that wasn't around 15 years ago but is now completely ubiquitous."
       },
@@ -1188,14 +1230,15 @@ const VOCAB_PACKS = [
           "Analyze the disparity between two competing products or quotes."
         ],
         practiceQuestion: {
-          scenario: "Two contractors quote prices for painting the same bedroom: one asks for $300, the other asks for $2,800. There is a huge:",
+          scenario: "An investigation reveals that top executives at a retail chain earn $14,000,000 per year while frontline warehouse workers receive $15 an hour without paid sick leave. An economic journalist highlights the glaring:",
           options: [
-            "Disparity in their estimates.",
-            "Equivocal compromise.",
-            "Tacit agreement."
-          ],
-          correctIndex: 0,
-          explanation: "'Disparity' highlights a pronounced, noticeable divergence between figures or circumstances."
+            "Tacit agreement to eliminate all wealth differences.",
+            "Precedent of equal compensation across company departments.",
+            "Superficial similarity between corporate and hourly payrolls.",
+            "Disparity between executive compensation and frontline wages."
+],
+          correctIndex: 3,
+          explanation: "'Disparity' refers to a great, noticeable difference or inequality between two or more things."
         },
         writingPrompt: "Describe a disparity between your expectations of a hobby and the actual reality of doing it."
       },
@@ -1215,14 +1258,15 @@ const VOCAB_PACKS = [
           "Use 'paradoxically' to introduce an unexpected insight."
         ],
         practiceQuestion: {
-          scenario: "A study discovers that the more convenience apps people install on their phones, the less free time they report feeling. That situation represents a:",
+          scenario: "A productivity expert points out that the more communication apps a company installs to 'save time' (Slack, Teams, WhatsApp, Asana), the less actual focused work gets finished during the day. This situation is a classic:",
           options: [
-            "Modern paradox.",
-            "Fastidious rule.",
-            "Conciliatory gesture."
-          ],
-          correctIndex: 0,
-          explanation: "A paradox is a contradiction that reveals an intriguing underlying psychological or systemic truth."
+            "Expedient benchmark for all software startups.",
+            "Paradox—a contradictory reality where tools designed to save time actually consume it.",
+            "Anomaly that occurs in only one company worldwide.",
+            "Disingenuous plot engineered by computer mice manufacturers."
+],
+          correctIndex: 1,
+          explanation: "'Paradox' describes a seemingly contradictory statement, proposition, or reality that nonetheless expresses a truth."
         },
         writingPrompt: "Write a sentence articulating the 'paradox of choice' when looking at a huge Netflix catalog."
       },
@@ -1242,14 +1286,15 @@ const VOCAB_PACKS = [
           "Check whether one of your own assumptions is backed by facts or merely arbitrary."
         ],
         practiceQuestion: {
-          scenario: "A manager sets a sales quota of exactly 73 units because 73 is their lucky roulette number. That target was:",
+          scenario: "A teacher decides that on Tuesdays, students who wear blue socks get an automatic A grade, while students who wear black socks must clean the chalkboard. The principal rejects this policy because grading must not be:",
           options: [
-            "Arbitrary.",
-            "Pragmatic.",
-            "Astute."
-          ],
+            "Arbitrary, based on random personal whim rather than objective performance or merit.",
+            "Enduring and consistent with pedagogical history.",
+            "Fastidious about real academic standards.",
+            "Tangible evidence of student intelligence."
+],
           correctIndex: 0,
-          explanation: "'Arbitrary' describes choices made on whim or randomness rather than solid evidence."
+          explanation: "'Arbitrary' describes an action or decision based on individual whim or random chance rather than reason, law, or objective principles."
         },
         writingPrompt: "Write about an arbitrary rule you encountered in school or a past job."
       },
@@ -1269,14 +1314,15 @@ const VOCAB_PACKS = [
           "Distinguish between a temporary anomaly and a permanent shift in trend."
         ],
         practiceQuestion: {
-          scenario: "A basketball player who usually shoots 40% from the three-point line misses 11 shots in a row during one game, then returns to 40% for the rest of the season. That off night was an:",
+          scenario: "A medical clinic reviews 10,000 blood pressure readings where every patient averages 120/80, except for one marathon runner whose resting pulse is a shockingly low 28 beats per minute with zero distress. The cardiologist notes this reading is an:",
           options: [
-            "Anomaly.",
-            "Inertia.",
-            "Articulate performance."
-          ],
-          correctIndex: 0,
-          explanation: "An anomaly is an unusual deviation from an otherwise consistent pattern."
+            "Arbitrary guideline for the general public.",
+            "Enduring benchmark that everyone should adopt.",
+            "Anomaly—a rare deviation from what is statistically normal or expected.",
+            "Ubiquitous symptom of heart failure."
+],
+          correctIndex: 2,
+          explanation: "'Anomaly' refers to something that deviates significantly from what is standard, normal, or expected."
         },
         writingPrompt: "Describe an anomaly you noticed in your energy levels or daily routine recently."
       },
@@ -1296,14 +1342,15 @@ const VOCAB_PACKS = [
           "Recognize when you are following a healthy personal precedent."
         ],
         practiceQuestion: {
-          scenario: "A parent lets their toddler stay up past midnight to eat ice cream on a Tuesday night. The parent worries this will:",
+          scenario: "A team asks to work entirely from Bali for six months. The HR director worries that if she approves this single request, dozens of other employees will demand the same privilege next week. She cautions that approving this would set a dangerous:",
           options: [
-            "Set a bad precedent for bedtime routines.",
-            "Bolster their vocabulary.",
-            "Mitigate all future tantrums."
-          ],
-          correctIndex: 0,
-          explanation: "Setting a precedent creates a baseline expectation that others will point back to in the future."
+            "Paradox that confuses time zones.",
+            "Precedent that makes it legally and culturally difficult to deny future similar requests.",
+            "Disparity between Bali and London weather.",
+            "Circumspect solution to international tax codes."
+],
+          correctIndex: 1,
+          explanation: "'Precedent' is an earlier action, event, or decision that is subsequently regarded as an example, rule, or justification."
         },
         writingPrompt: "Write a sentence warning someone why bending a rule today could set a risky precedent tomorrow."
       },
@@ -1323,14 +1370,15 @@ const VOCAB_PACKS = [
           "Check whether an assumption you made was extrapolated from too little evidence."
         ],
         practiceQuestion: {
-          scenario: "You try two bites of a salad at a brand-new restaurant and assume the entire dinner menu must be spectacular. A friend might caution you:",
+          scenario: "A mobile game tests a new purchase button on 1,000 users in Canada and finds 4% buy a virtual gem. The lead analyst warns leadership not to prematurely:",
           options: [
-            "Don't extrapolate the quality of the whole menu from just a salad.",
-            "Your food is becoming untenable.",
-            "That's a very conciliatory fork."
-          ],
-          correctIndex: 0,
-          explanation: "'Extrapolate' means extending an isolated observation into a broad generalized conclusion."
+            "Mitigate the revenue numbers before lunch.",
+            "Delineate Canada from the rest of the world.",
+            "Galvanize players to stop playing video games.",
+            "Extrapolate that 4% global conversion rate without testing larger, diverse international markets."
+],
+          correctIndex: 3,
+          explanation: "'Extrapolate' means to estimate or conclude something by extending known data or trends into unknown territory."
         },
         writingPrompt: "Write a sentence showing how you might extrapolate your savings over the next three years."
       },
@@ -1350,14 +1398,15 @@ const VOCAB_PACKS = [
           "Ask for 'tangible examples' when someone explains a vague concept."
         ],
         practiceQuestion: {
-          scenario: "Instead of saying 'we improved communication', a project lead notes: 'Daily standup duration dropped by 14 minutes and pull request reviews rose by 25%.' These metrics are:",
+          scenario: "A fitness brand stops talking about vague concepts like 'wellness' and instead promises customers that after 30 days they will lift 20 more pounds and drop 2 inches from their waistline. Customers appreciate having:",
           options: [
-            "Tangible proof of improvement.",
-            "Arbitrary feelings.",
-            "Equivocal rumors."
-          ],
-          correctIndex: 0,
-          explanation: "'Tangible' signifies concrete, perceptible, and verifiable evidence."
+            "Superficial and imaginary goals.",
+            "Capricious guidelines that change daily.",
+            "Tangible, measurable results rather than abstract promises.",
+            "Specious theories about athletic biology."
+],
+          correctIndex: 2,
+          explanation: "'Tangible' means perceptible by touch, concrete, real, and definite rather than abstract or imaginary."
         },
         writingPrompt: "What is one tangible improvement you have noticed in your daily life over the past year?"
       },
@@ -1377,14 +1426,15 @@ const VOCAB_PACKS = [
           "Look beyond superficial appearances when judging a new experience."
         ],
         practiceQuestion: {
-          scenario: "A candidate memorized buzzwords for an interview but cannot explain how any of the algorithms actually work under the hood. Their technical knowledge is:",
+          scenario: "A reviewer critiques a modern architectural mansion that looks breathtaking in Instagram photographs, but has paper-thin walls, leaky plumbing, and no functional kitchen storage. The reviewer concludes the home's luxury is merely:",
           options: [
-            "Superficial.",
-            "Fastidious.",
-            "Astute."
-          ],
+            "Superficial—all glossy appearance on the surface with zero depth or structural substance.",
+            "Quintessential engineering that will last three centuries.",
+            "Astute utilization of interior design.",
+            "Plausible evidence of superior construction."
+],
           correctIndex: 0,
-          explanation: "'Superficial' indicates shallow, surface-level familiarity lacking real substance or comprehension."
+          explanation: "'Superficial' means existing only on the surface, skin-deep, and lacking depth, quality, or true substance."
         },
         writingPrompt: "Write a sentence contrasting a superficial conversation with a deeply engaging one."
       }
@@ -1411,14 +1461,15 @@ const VOCAB_PACKS = [
           "Demur gracefully when offered something you'd rather decline."
         ],
         practiceQuestion: {
-          scenario: "Your host insists on paying the entire hefty restaurant bill alone, but you offer to pay the tip and split the wine. You initially:",
+          scenario: "At an executive dinner, a senior VP proposes cutting client onboarding support by half to hit a short-term quarterly profit bonus. While others nod nervously, a respected manager politely raises concerns about long-term customer churn. That manager decided to:",
           options: [
-            "Demurred out of courtesy before compromising.",
-            "Precipitated a violent fight.",
-            "Were being ubiquitous."
-          ],
-          correctIndex: 0,
-          explanation: "'Demur' signifies polite reluctance or hesitation in accepting something."
+            "Concede immediately without any objections.",
+            "Demur politely, voicing well-reasoned hesitation rather than going along blindly.",
+            "Exacerbate the dinner by flipping over the banquet table.",
+            "Precipitate an instant consensus."
+],
+          correctIndex: 1,
+          explanation: "'Demur' means to raise polite doubts or objections, or show reluctance to accept a proposition."
         },
         writingPrompt: "Write a sentence showing how someone politely demurred an invitation."
       },
@@ -1438,14 +1489,15 @@ const VOCAB_PACKS = [
           "Notice when someone defers to your opinion."
         ],
         practiceQuestion: {
-          scenario: "You are picking wine for a dinner party with a certified sommelier friend. You hand them the wine list and say:",
+          scenario: "During a contentious meeting on patent litigation, the company CEO recognizes that she does not hold a law degree. She looks at the veteran in-house legal counsel and says: 'I will yield to your judgment on this filing.' In doing so, the CEO chooses to:",
           options: [
-            "I defer to your palate on this one.",
-            "I am delineating your palate.",
-            "You are an untenable guest."
-          ],
-          correctIndex: 0,
-          explanation: "'Defer to' means yielding decision-making authority to someone with superior knowledge or authority."
+            "Rebut the lawyer's constitutional authority.",
+            "Understate the importance of the legal department.",
+            "Demur from ever reading patent laws again.",
+            "Defer to the specialist's expertise and superior domain knowledge."
+],
+          correctIndex: 3,
+          explanation: "'Defer' means to submit, yield respectfully, or give way to another person's judgment, opinion, or expertise."
         },
         writingPrompt: "Write a sentence using 'I defer to you' in a collaborative team context."
       },
@@ -1465,14 +1517,15 @@ const VOCAB_PACKS = [
           "Compliment someone's diplomatic phrasing after a tense exchange."
         ],
         practiceQuestion: {
-          scenario: "A friend asks if their new haircut looks weird, and you say: 'It's a bold and modern change, though I also really loved your shoulder-length curls.' That response was:",
+          scenario: "A guest at a family wedding accidentally wears the same designer dress as the mother of the bride. Instead of causing a scene or making a snide comment, the bride's mother laughs warmly and suggests taking photos together as 'fashion twins.' The mother's response was exceptionally:",
           options: [
-            "Diplomatic and kind.",
-            "Arbitrary and crude.",
-            "Superficial and hostile."
-          ],
+            "Diplomatic, gracefully diffusing a potentially embarrassing clash with poise and tact.",
+            "Superficial and bitterly vengeful.",
+            "Capricious and dangerously volatile.",
+            "Dispassionate and lacking any human warmth."
+],
           correctIndex: 0,
-          explanation: "Diplomatic communication delivers honest feedback with tact and empathy."
+          explanation: "'Diplomatic' means exhibiting tact, emotional intelligence, and sensitivity in dealing with delicate interpersonal situations."
         },
         writingPrompt: "Write a diplomatic response to a coworker whose idea is impractical."
       },
@@ -1492,14 +1545,15 @@ const VOCAB_PACKS = [
           "Say 'I concede that point' when someone presents compelling data."
         ],
         practiceQuestion: {
-          scenario: "You insisted that the movie started at 7:30 PM, but your friend pulls out the digital ticket showing 7:00 PM. You say:",
+          scenario: "In a formal debate on public transport, a speaker fiercely defends diesel buses for two rounds. However, when the opponent presents incontrovertible electric maintenance balance sheets, the speaker acknowledges: 'Fair point, the lifecycle battery math is undeniably stronger.' In that moment, the speaker:",
           options: [
-            "Alright, I concede—you were right, we need to hurry.",
-            "I will bolster my tickets.",
-            "Your ticket is completely equivocal."
-          ],
-          correctIndex: 0,
-          explanation: "'Concede' means gracefully acknowledging the validity of the other party's point or evidence."
+            "Delineated the buses into streetcars.",
+            "Elucidated why diesel is completely tenable.",
+            "Conceded that the opponent's financial data was valid and superior.",
+            "Demurred from listening to facts."
+],
+          correctIndex: 2,
+          explanation: "'Concede' means to admit, acknowledge, or yield that something is true, valid, or proper after initial resistance."
         },
         writingPrompt: "Write about a time you conceded an argument and felt better for doing so."
       },
@@ -1519,14 +1573,15 @@ const VOCAB_PACKS = [
           "Ask someone: 'Did that resonate with what you've been seeing?'"
         ],
         practiceQuestion: {
-          scenario: "An author describes the feeling of walking through a quiet hometown after years away, and you feel tears in your eyes because you experienced the exact same thing. That passage:",
+          scenario: "A keynote speaker tells a story about her early career failures and the terrifying feeling of almost losing her home before turning her business around. When she finishes, half the audience has tears in their eyes and nods vigorously. Her personal story:",
           options: [
-            "Resonated deeply with you.",
-            "Was completely arbitrary.",
-            "Exacerbated your reading."
-          ],
-          correctIndex: 0,
-          explanation: "'Resonate' conveys a deep emotional harmony between a message and personal experience."
+            "Was arbitrary and irrelevant to the business topic.",
+            "Understated the value of hard work.",
+            "Rebutted all previous speaker presentations.",
+            "Resonated deeply with the audience, evoking shared emotion, empathy, and mutual experience."
+],
+          correctIndex: 3,
+          explanation: "'Resonate' means to evoke a feeling of shared emotion, recognition, agreement, or sympathy in others."
         },
         writingPrompt: "What is a piece of advice or movie line that continues to resonate with you?"
       },
@@ -1546,14 +1601,15 @@ const VOCAB_PACKS = [
           "Notice how understating a triumph can sometimes feel classier than bragging."
         ],
         practiceQuestion: {
-          scenario: "Someone survives a category 5 hurricane that ripped the roof off their garage and says: 'The wind was a bit breezy outside.' They are:",
+          scenario: "A mountain climber survives an 80-foot crevasse fall, extracts himself with a broken wrist, and hikes four miles through a blizzard to reach base camp. When reporters ask him about the ordeal, he shrugs and says: 'It was a bit chilly, but we made it.' By speaking this way, he chose to:",
           options: [
-            "Understating the storm's intensity.",
-            "Delineating the clouds.",
-            "Being fastidious."
-          ],
-          correctIndex: 0,
-          explanation: "'Understate' means intentionally portraying something as far less severe or massive than it is."
+            "Elucidate every gory medical detail.",
+            "Understate the immense danger and severity of his survival story.",
+            "Concede defeat to the blizzard.",
+            "Demur from ever climbing mountains again."
+],
+          correctIndex: 1,
+          explanation: "'Understate' means to describe or represent something as smaller, less severe, or less important than it actually is."
         },
         writingPrompt: "Write a humorous understatement describing a very hectic Monday morning."
       },
@@ -1573,14 +1629,15 @@ const VOCAB_PACKS = [
           "Juxtapose two different approaches to solving a problem in conversation."
         ],
         practiceQuestion: {
-          scenario: "An art museum exhibits a 16th-century classical oil painting directly beside a neon cyberpunk digital sculpture to emphasize their differing takes on light. The curator has:",
+          scenario: "A photojournalist arranges a double-spread spread in a magazine: on the left page, a glittering billionaires' gala in Manhattan; on the right page, homeless shelters four blocks away under cardboard blankets. The photographer chose to:",
           options: [
-            "Juxtaposed the two artworks.",
-            "Mitigated the oil paint.",
-            "Dealt with an anomaly."
-          ],
-          correctIndex: 0,
-          explanation: "'Juxtapose' means placing disparate items side-by-side to highlight comparative differences."
+            "Precipitate an anomaly in the paper printing press.",
+            "Defer the moral meaning to the magazine advertisers.",
+            "Juxtapose the two contrasting images to highlight the stark economic divide.",
+            "Understate the wealth of Manhattan."
+],
+          correctIndex: 2,
+          explanation: "'Juxtapose' means to place two distinct things side-by-side or close together in order to highlight contrasting effects."
         },
         writingPrompt: "Write a sentence juxtaposing a calm morning routine with a chaotic workday."
       },
@@ -1600,14 +1657,15 @@ const VOCAB_PACKS = [
           "Elucidate a complex hobby of yours to a curious friend."
         ],
         practiceQuestion: {
-          scenario: "A doctor takes out a diagram and explains step-by-step how a new medication regulates blood pressure in clear terms. The doctor:",
+          scenario: "A complex cryptocurrency taxation bill is 800 pages of confusing cross-references. A tax law professor publishes a five-minute video breaking down the three rules that actually affect everyday crypto holders. The professor worked to:",
           options: [
-            "Elucidated the treatment mechanism.",
-            "Exacerbated the illness.",
-            "Was being equivocal."
-          ],
+            "Elucidate the complex legislation, making confusing legal jargon crystal clear.",
+            "Demur against the existence of taxes.",
+            "Exacerbate the confusion of small crypto traders.",
+            "Precipitate a collapse in global markets."
+],
           correctIndex: 0,
-          explanation: "'Elucidate' means illuminating and clarifying something complex or opaque."
+          explanation: "'Elucidate' means to make something clear, explain in detail, or shed light upon a complex topic."
         },
         writingPrompt: "Write a sentence asking an expert to elucidate a confusing step in a tutorial."
       },
@@ -1627,14 +1685,15 @@ const VOCAB_PACKS = [
           "Use 'vindicate' when data proves a contrarian strategy right."
         ],
         practiceQuestion: {
-          scenario: "You warned everyone that the bridge would be closed for construction, but they didn't believe you until the GPS redirected all traffic. You felt:",
+          scenario: "An engineer is ridiculed by colleagues for three years for insisting that a competitor's proprietary chip had a fatal hardware flaw. When the competitor issues a global multi-billion dollar product recall due to that exact flaw, the engineer is completely:",
           options: [
-            "Vindicated.",
-            "Untenable.",
-            "Capricious."
-          ],
-          correctIndex: 0,
-          explanation: "'Vindicated' means proven correct after being doubted or questioned."
+            "Demurred by the engineering board.",
+            "Vindicated, proven entirely correct and cleared of all past skepticism.",
+            "Understated by the global press.",
+            "Rebutted by the competitor's success."
+],
+          correctIndex: 1,
+          explanation: "'Vindicate' means to clear of blame, suspicion, or doubt, and prove someone right or justified in the end."
         },
         writingPrompt: "Describe a moment when your intuition or unpopular opinion was vindicated."
       },
@@ -1654,14 +1713,15 @@ const VOCAB_PACKS = [
           "Use 'in rebuttal to...' during a debate or review."
         ],
         practiceQuestion: {
-          scenario: "A reviewer claims an app crashes on login, and the developer shares a screen recording and server logs showing 100% uptime and smooth logins. The developer:",
+          scenario: "In a municipal zoning debate, a developer claims that building a new high-rise will not increase local traffic. The neighborhood association chair steps up with city camera data showing intersections already operating at 140% capacity. She takes the microphone to:",
           options: [
-            "Rebutted the negative claim with proof.",
-            "Conceded defeat immediately.",
-            "Precipitated the app's deletion."
-          ],
-          correctIndex: 0,
-          explanation: "'Rebut' means offering concrete counter-arguments or evidence to dismantle a claim."
+            "Defer all zoning authority to the developer.",
+            "Juxtapose the high-rise against a park.",
+            "Concede that traffic is nonexistent in the city.",
+            "Rebut the developer's claim using verifiable municipal traffic counts."
+],
+          correctIndex: 3,
+          explanation: "'Rebut' means to prove or argue that an accusation, evidence, or proposition is false, incorrect, or invalid."
         },
         writingPrompt: "Write a sentence showing how you might rebut a common misconception about your favorite subject."
       }
@@ -1688,14 +1748,15 @@ const VOCAB_PACKS = [
           "Describe a bittersweet life milestone as 'poignant'."
         ],
         practiceQuestion: {
-          scenario: "An elderly grandfather plays the piano piece his late wife composed for their wedding fifty years ago as his family gathers in silence. The atmosphere was:",
+          scenario: "An elderly grandfather unpacks a dusty wooden trunk in the attic and finds his late wife's hand-knitted baby sweater and a bundle of wartime letters written when they were nineteen. As he reads them, a tear slips down his cheek. Observers describe the moment as deeply:",
           options: [
-            "Poignant and emotionally stirring.",
-            "Arbitrary and superficial.",
-            "Expedient and brisk."
-          ],
+            "Poignant, evoking a tender, moving sadness and sharp emotional resonance.",
+            "Indifferent, displaying a total lack of concern or feeling.",
+            "Complacent about the passage of time.",
+            "Dispassionate and purely analytical."
+],
           correctIndex: 0,
-          explanation: "'Poignant' denotes a piercing, touching mixture of love, memory, and tender sorrow."
+          explanation: "'Poignant' describes something that evokes a sharp, deep sense of sadness, regret, or tender emotional touch."
         },
         writingPrompt: "Write a sentence capturing a poignant memory from your childhood or family history."
       },
@@ -1715,14 +1776,15 @@ const VOCAB_PACKS = [
           "Distinguish between being indifferent versus being ambivalent."
         ],
         practiceQuestion: {
-          scenario: "You've been offered a promotion that doubles your salary but requires moving across the country away from your family. You feel:",
+          scenario: "A graphic designer is offered a lucrative promotion that doubles her salary, but requires moving 4,000 miles away from her aging parents and lifelong friends. When asked if she is taking the job, she sighs and admits she is:",
           options: [
-            "Ambivalent about accepting it.",
-            "Completely indifferent and bored.",
-            "Fastidious about the country."
-          ],
-          correctIndex: 0,
-          explanation: "Ambivalence is experiencing competing, simultaneous positive and negative motivations."
+            "Sanguine that moving will never affect her relationships.",
+            "Dogmatic about hating all money.",
+            "Ambivalent, torn between simultaneous opposing feelings of excitement and deep reluctance.",
+            "Complacent with her life choices."
+],
+          correctIndex: 2,
+          explanation: "'Ambivalent' means having mixed, contradictory, or simultaneous opposing feelings about someone or something."
         },
         writingPrompt: "Describe a decision or opportunity where you felt genuinely ambivalent."
       },
@@ -1742,14 +1804,15 @@ const VOCAB_PACKS = [
           "Use 'complacent' when warning someone against premature celebration."
         ],
         practiceQuestion: {
-          scenario: "A champion runner stops training hard three weeks before the finals because they easily beat their opponents last year, only to be overtaken by a newcomer. The champion had grown:",
+          scenario: "A world-champion soccer team wins three championships in a row. Entering the new season, players start skipping optional cardio drills, arriving late to strategy reviews, and assuming they will glide to another trophy. Sports analysts warn the team has grown dangerously:",
           options: [
-            "Complacent.",
-            "Circumspect.",
-            "Articulate."
-          ],
-          correctIndex: 0,
-          explanation: "'Complacent' means resting smugly on past success while ignoring present threats."
+            "Resilient against all athletic fatigue.",
+            "Complacent, resting smugly on past laurels while failing to guard against hungry competitors.",
+            "Pensive about world literature.",
+            "Enamored with cardio training."
+],
+          correctIndex: 1,
+          explanation: "'Complacent' describes showing smug, uncritical, or self-satisfied contentment with past success while ignoring looming danger."
         },
         writingPrompt: "Write about an area where people easily become complacent once they get comfortable."
       },
@@ -1769,14 +1832,15 @@ const VOCAB_PACKS = [
           "Reflect on how a past difficulty made you more resilient today."
         ],
         practiceQuestion: {
-          scenario: "A startup's first product fails completely, but the team learns from user feedback, redesigns the app in two months, and secures 10,000 paying users on their second launch. The team is:",
+          scenario: "A family bakery loses its entire storefront and oven equipment in a river flash flood. Rather than giving up, the owners set up a temporary pop-up truck within seven days, secure community loans, and reopen an upgraded shop three months later. Customers praise them as remarkably:",
           options: [
-            "Resilient.",
-            "Untenable.",
-            "Equivocal."
-          ],
-          correctIndex: 0,
-          explanation: "'Resilient' honors the capacity to endure shocks, adapt, and rebound stronger."
+            "Indifferent to business profits.",
+            "Complacent with disaster.",
+            "Ambivalent about baking bread.",
+            "Resilient, demonstrating the grit and fortitude to bounce back stronger after severe adversity."
+],
+          correctIndex: 3,
+          explanation: "'Resilient' means able to withstand, bounce back, or recover quickly from tough conditions, failure, or shock."
         },
         writingPrompt: "Write a sentence defining what personal resilience means to you in one sentence."
       },
@@ -1796,14 +1860,15 @@ const VOCAB_PACKS = [
           "Balance cautious planning with a sanguine attitude."
         ],
         practiceQuestion: {
-          scenario: "It begins drizzling on the morning of an outdoor wedding, but the bride smiles and says: 'The clouds will make our photos look gorgeous without harsh shadows.' She is being:",
+          scenario: "Despite a sudden quarterly dip in tech sector stocks, a veteran financial planner smiles during a client webinar and calmly points to 50-year macroeconomic recovery cycles, assuring families their retirement funds remain on track. The planner remains:",
           options: [
-            "Sanguine.",
-            "Reticent.",
-            "Fastidious."
-          ],
+            "Sanguine, maintaining a grounded, confident optimism even amid turbulent headlines.",
+            "Apprehensive about every single financial transaction.",
+            "Enamored with losing client money.",
+            "Indifferent to the welfare of families."
+],
           correctIndex: 0,
-          explanation: "'Sanguine' describes maintaining confident, cheerful optimism amidst adversity."
+          explanation: "'Sanguine' means optimistic, positive, or cheerfully confident, particularly in the face of an apparently difficult situation."
         },
         writingPrompt: "Write a sentence adopting a sanguine stance regarding an uncertain situation in your life."
       },
@@ -1823,14 +1888,15 @@ const VOCAB_PACKS = [
           "Help soothe an apprehensive colleague with clear information."
         ],
         practiceQuestion: {
-          scenario: "You have your first dental checkup in three years and your stomach is in knots as you sit in the waiting room. You are feeling:",
+          scenario: "A student who has failed their driving test twice sits in the DMV parking lot gripping the steering wheel with sweaty palms, her heart racing as the stern examiner walks toward her car with a clipboard. She feels acutely:",
           options: [
-            "Apprehensive.",
-            "Sanguine.",
-            "Conciliatory."
-          ],
-          correctIndex: 0,
-          explanation: "'Apprehensive' describes specific anticipatory nervousness about an approaching event."
+            "Complacent about passing the exam.",
+            "Apprehensive, filled with nervous anxiety and fear about an impending ordeal.",
+            "Sanguine that the car will drive itself.",
+            "Dispassionate about whether she ever drives."
+],
+          correctIndex: 1,
+          explanation: "'Apprehensive' means anxious, uneasy, or fearful that something unpleasant, difficult, or disastrous will occur."
         },
         writingPrompt: "Describe an experience you were initially apprehensive about that turned out just fine."
       },
@@ -1850,14 +1916,15 @@ const VOCAB_PACKS = [
           "Take a pensive 10-minute walk without your phone today."
         ],
         practiceQuestion: {
-          scenario: "Your friend sits on a park bench gazing at the river, quietly replaying a long conversation they had with their mentor yesterday. They are in a:",
+          scenario: "During a quiet winter evening, a retired surgeon sits by the fireplace with an untouched mug of tea, staring deeply into the embers while reflecting on fifty years of life choices and missed family holidays. Her daughter notices she is in a:",
           options: [
-            "Pensive state.",
-            "Complacent mood.",
-            "Capricious mode."
-          ],
-          correctIndex: 0,
-          explanation: "'Pensive' portrays a quiet, solemn absorption in deep thought."
+            "Complacent and careless mood.",
+            "Gregarious mood ready to host twenty strangers.",
+            "Sanguine mood making loud jokes.",
+            "Pensive state, immersed in serious, quiet, and contemplative thought."
+],
+          correctIndex: 3,
+          explanation: "'Pensive' means engaged in, involving, or reflecting deep, serious, and contemplative thought."
         },
         writingPrompt: "Write a sentence describing what puts you in a pensive state of mind."
       },
@@ -1877,14 +1944,15 @@ const VOCAB_PACKS = [
           "Politely indicate that you 'weren't particularly enamored' with an overhyped restaurant."
         ],
         practiceQuestion: {
-          scenario: "After visiting a local bakery and tasting their cardamon buns, you talk about the pastry non-stop for three weeks and visit every Saturday. You are:",
+          scenario: "A tourist visits Florence for a 3-day weekend and ends up canceling his return ticket, renting a small studio apartment above a Tuscan vineyard, and spending every morning studying Renaissance fresco painting. His family says he has become completely:",
           options: [
-            "Enamored with their cardamom buns.",
-            "Ambivalent toward the bakery.",
-            "Reticent about dessert."
-          ],
-          correctIndex: 0,
-          explanation: "'Enamored' means deeply captivated, charmed, and enthusiastic about something."
+            "Indifferent to Italian culture.",
+            "Ambivalent about visiting museums.",
+            "Enamored with the beauty, art, and lifestyle of the Italian countryside.",
+            "Apprehensive about ever seeing art."
+],
+          correctIndex: 2,
+          explanation: "'Enamored' means filled with intense love, deep admiration, fascination, or strong enthusiasm for something."
         },
         writingPrompt: "Write about a city, artist, or hobby you became completely enamored with."
       },
@@ -1904,14 +1972,15 @@ const VOCAB_PACKS = [
           "Praise someone for their dispassionate, objective assessment."
         ],
         practiceQuestion: {
-          scenario: "Two friends are having a screaming match over a board game rule, and a third friend calmly reads the exact rulebook text without taking sides. That third friend provided a:",
+          scenario: "When two co-founders get into an emotional screaming match over equity split, they hire an independent mediator who reviews cap tables, listens calmly to both parties without taking sides, and provides an impartial assessment based solely on contributed capital. The mediator's approach is admirably:",
           options: [
-            "Dispassionate interpretation.",
-            "Volatile explosion.",
-            "Capricious verdict."
-          ],
+            "Dispassionate, free from emotional bias and governed purely by reason and fairness.",
+            "Enamored with personal drama.",
+            "Apprehensive and afraid to speak.",
+            "Complacent about company bankruptcy."
+],
           correctIndex: 0,
-          explanation: "'Dispassionate' means free from personal passion or bias, enabling fair judgment."
+          explanation: "'Dispassionate' means not influenced by strong emotion, personal feelings, or bias; rationally detached and fair."
         },
         writingPrompt: "Write a sentence advising a friend on why a dispassionate perspective is needed before sending an angry email."
       },
@@ -1931,14 +2000,15 @@ const VOCAB_PACKS = [
           "Notice when genuine indifference frees you from unnecessary stress."
         ],
         practiceQuestion: {
-          scenario: "You're asked whether you prefer blue napkins or teal napkins for a casual picnic and honestly have zero preference. You tell them:",
+          scenario: "A heated argument breaks out at the dinner table over whether pineapple belongs on pizza. While everyone is yelling loudly, one guest calmly shrugs, continues chewing his salad, and says 'eat whatever you want, it makes no difference to me.' His attitude toward the controversy is completely:",
           options: [
-            "I'm completely indifferent—pick whichever you like.",
-            "I'm deeply poignant about napkins.",
-            "That choice is entirely untenable."
-          ],
-          correctIndex: 0,
-          explanation: "'Indifferent' means having no personal preference, bias, or emotional concern."
+            "Sanguine and wildly enthusiastic.",
+            "Indifferent, displaying zero personal interest, concern, or partiality in the outcome.",
+            "Poignant and emotionally heartbreaking.",
+            "Apprehensive about food safety."
+],
+          correctIndex: 1,
+          explanation: "'Indifferent' means having no particular interest, sympathy, or concern; unbothered and detached."
         },
         writingPrompt: "Write a sentence about a pop culture debate where you are completely indifferent to the outcome."
       }
@@ -1965,14 +2035,15 @@ const VOCAB_PACKS = [
           "Use 'spearhead' on your resume or LinkedIn profile."
         ],
         practiceQuestion: {
-          scenario: "When the neighborhood needed a speed bump installed near the school, David collected 500 signatures, drafted the petition, and attended city council. David:",
+          scenario: "A global tech company wants to reduce its carbon footprint. A senior director steps forward to draft the sustainability charter, secure executive funding, and personally oversee the solar panel rollout across 40 facilities. She chose to:",
           options: [
-            "Spearheaded the safety initiative.",
-            "Demurred at the road work.",
-            "Was indifferent to the cars."
-          ],
-          correctIndex: 0,
-          explanation: "'Spearhead' means actively leading and driving a concerted effort from the front."
+            "Circumvent all environmental standards.",
+            "Defer the initiative to junior interns.",
+            "Reiterate why carbon reduction is impossible.",
+            "Spearhead the enterprise-wide green energy initiative from inception to execution."
+],
+          correctIndex: 3,
+          explanation: "'Spearhead' means to lead, initiate, and drive forward a campaign, movement, or major strategic attack."
         },
         writingPrompt: "Describe an initiative or habit you spearheaded in your life or community."
       },
@@ -1992,14 +2063,15 @@ const VOCAB_PACKS = [
           "Think about what parts of your daily schedule you can orchestrate more smoothly."
         ],
         practiceQuestion: {
-          scenario: "A wedding planner coordinates 12 vendors, florists, musicians, caterers, and lighting technicians to execute a flawless 6-hour evening. The planner:",
+          scenario: "To launch a new video game, a marketing director coordinates simultaneous releases with Twitch streamers, Hollywood billboard takeovers, esports tournaments, and international press junkets so that all buzz peaks on the exact same Friday. She managed to:",
           options: [
-            "Orchestrated the entire celebration.",
-            "Exacerbated the evening.",
-            "Remained ambivalent throughout."
-          ],
-          correctIndex: 0,
-          explanation: "'Orchestrate' means deftly harmonizing multiple complex elements toward a seamless outcome."
+            "Understate the game's production budget.",
+            "Orchestrate a complex, multi-channel rollout where every element moved in perfect synchronization.",
+            "Circumvent all consumer advertising laws.",
+            "Streamline the game by deleting player save files."
+],
+          correctIndex: 1,
+          explanation: "'Orchestrate' means to plan, arrange, and coordinate diverse and complex elements to produce a desired unified effect."
         },
         writingPrompt: "Write a sentence describing an event or surprise you helped orchestrate."
       },
@@ -2019,14 +2091,15 @@ const VOCAB_PACKS = [
           "Use 'streamline' when proposing a simpler workflow."
         ],
         practiceQuestion: {
-          scenario: "A clinic introduces a digital check-in tablet that replaces five paper forms and cuts waiting room time by 15 minutes. The clinic:",
+          scenario: "A hospital emergency room finds that patients must fill out eight redundant paper forms before being triaged. The hospital implements a digital tablet system that cuts paperwork time from 25 minutes down to 3 minutes. The hospital took steps to:",
           options: [
-            "Streamlined patient intake.",
-            "Complicated the benchmark.",
-            "Extrapolated the waiting room."
-          ],
-          correctIndex: 0,
-          explanation: "'Streamline' means eliminating redundancies to make an operation run faster and cleaner."
+            "Exacerbate patient waiting times.",
+            "Circumvent medical malpractice protocols.",
+            "Streamline the intake workflow, stripping away wasteful redundancies for maximum efficiency.",
+            "Spearhead an increase in hospital paperwork."
+],
+          correctIndex: 2,
+          explanation: "'Streamline' means to make an organization, process, or workflow more efficient and simpler by eliminating unnecessary complexity."
         },
         writingPrompt: "Write about one personal workflow you streamlined and the time it saved you."
       },
@@ -2046,14 +2119,15 @@ const VOCAB_PACKS = [
           "Think about what unique strengths you can leverage this month."
         ],
         practiceQuestion: {
-          scenario: "You already speak fluent Spanish, so you volunteer for an international project where you can build relationships with Latin American partners. You are:",
+          scenario: "An independent filmmaker with an ultra-small $50,000 budget uses her 2,000,000 TikTok followers to crowdfund production costs, cast local actors for free, and secure distribution deals with indie festivals. She was able to:",
           options: [
-            "Leveraging your language skills.",
-            "Precipitating an obstacle.",
-            "Understating your presence."
-          ],
+            "Leverage her existing digital audience to overcome financial constraints and achieve maximum impact.",
+            "Reiterate her lack of movie directing skills.",
+            "Orchestrate a retreat from the film industry.",
+            "Circumvent all cinematic cameras."
+],
           correctIndex: 0,
-          explanation: "'Leverage' means turning an existing asset or talent into a competitive advantage."
+          explanation: "'Leverage' means using something (a resource, skill, or connection) to maximum advantage to achieve greater results."
         },
         writingPrompt: "Write a sentence showing how you can leverage an everyday habit to learn something new."
       },
@@ -2073,14 +2147,15 @@ const VOCAB_PACKS = [
           "Celebrate a smart personal pivot you made in your career or education."
         ],
         practiceQuestion: {
-          scenario: "A photography studio's wedding bookings drop in winter, so they quickly switch to shooting corporate headshots and pet portraits until spring. That was a:",
+          scenario: "A fitness app that originally tracked bicycle rides realizes 85% of its user engagement comes from corporate step-counting challenges. The founders quickly rebrand the app, redesign the home screen, and focus entirely on enterprise wellness programs. The startup executed a smart strategic:",
           options: [
-            "Strategic pivot.",
-            "Capricious downfall.",
-            "Tacit catastrophe."
-          ],
-          correctIndex: 0,
-          explanation: "'Pivot' means adapting tactical focus to new conditions without abandoning the core enterprise."
+            "Precedent of bankruptcy.",
+            "Inertia toward bicycles.",
+            "Pivot, swiftly redirecting their business focus toward where proven demand was strongest.",
+            "Superficial promise that ignored users."
+],
+          correctIndex: 2,
+          explanation: "'Pivot' in strategy and life means a rapid, deliberate shift in direction or business model based on new evidence."
         },
         writingPrompt: "Describe a moment when bad weather or a cancellation forced you to pivot your plans."
       },
@@ -2100,14 +2175,15 @@ const VOCAB_PACKS = [
           "Reiterate a key deadline before concluding a discussion."
         ],
         practiceQuestion: {
-          scenario: "At the end of a long team planning call, the manager recaps the three most critical deliverable dates. The manager is:",
+          scenario: "At the conclusion of a three-hour safety briefing on an offshore oil rig, the operations commander gathers the entire crew and says: 'Before you step on deck, I want to say this one last time: never enter the pressure room without a gas monitor.' By doing so, the commander chose to:",
           options: [
-            "Reiterating key deadlines.",
-            "Demurring on the schedule.",
-            "Being supercilious."
-          ],
-          correctIndex: 0,
-          explanation: "'Reiterate' means restating crucial information for absolute clarity and alignment."
+            "Streamline the rig's emergency valves.",
+            "Circumvent maritime safety regulations.",
+            "Implement a ban on monitors.",
+            "Reiterate the non-negotiable safety protocol so it stays at the top of everyone's mind."
+],
+          correctIndex: 3,
+          explanation: "'Reiterate' means to say, state, or emphasize something again or repeatedly for clarity and impact."
         },
         writingPrompt: "Write a message reiterating an important reminder to a group without sounding impatient."
       },
@@ -2127,14 +2203,15 @@ const VOCAB_PACKS = [
           "Use 'consolidate' when suggesting merging two redundant meetings."
         ],
         practiceQuestion: {
-          scenario: "You have five different subscription accounts on three credit cards, so you merge them into a single family plan on one card. You have:",
+          scenario: "A corporation owns twelve small sub-brands that run separate customer service desks, separate warehouses, and separate billing software. To cut overhead and centralize operations, the board merges them into a single headquarters. The board voted to:",
           options: [
-            "Consolidated your subscriptions.",
-            "Juxtaposed your budget.",
-            "Extrapolated your credit."
-          ],
+            "Consolidate fragmented business units into one stronger, unified, and more efficient organization.",
+            "Circumvent all financial ledgers.",
+            "Spearhead a decline in customer satisfaction.",
+            "Pivot into twelve independent companies."
+],
           correctIndex: 0,
-          explanation: "'Consolidate' means gathering disparate items into a unified, coherent system."
+          explanation: "'Consolidate' means to combine a number of things into a single, more effective, coherent, or coherent whole."
         },
         writingPrompt: "Write a sentence showing how you can consolidate your digital notifications to improve focus."
       },
@@ -2154,14 +2231,15 @@ const VOCAB_PACKS = [
           "Find a resourceful way to circumvent a daily bottleneck."
         ],
         practiceQuestion: {
-          scenario: "A website button is broken on mobile safari, so a user rotates the screen to desktop mode to complete their booking. The user:",
+          scenario: "During a massive transit strike where all subway lines are shut down, a commuter who needs to reach an urgent job interview uses an electric rental bicycle through city alleys to bypass gridlocked traffic. She managed to:",
           options: [
-            "Circumvented the UI bug.",
-            "Corroborated the screen.",
-            "Bolstered the browser."
-          ],
-          correctIndex: 0,
-          explanation: "'Circumvent' denotes intelligently routing around an impediment or restriction."
+            "Reiterate the subway strike rules.",
+            "Circumvent the traffic gridlock by finding an alternate, clever route around the bottleneck.",
+            "Spearhead a citywide transit shutdown.",
+            "Consolidate her bicycle with a bus."
+],
+          correctIndex: 1,
+          explanation: "'Circumvent' means to find a way around an obstacle, problem, or restriction, often through ingenuity or agility."
         },
         writingPrompt: "Describe a clever workaround you used to circumvent a frustrating delay or bureaucracy."
       },
@@ -2181,14 +2259,15 @@ const VOCAB_PACKS = [
           "Use 'prioritize' when explaining why you cannot take on additional commitments."
         ],
         practiceQuestion: {
-          scenario: "You have 5 chores to do in two hours before family visits, and you clean the bathroom and vacuum the living room first, leaving the garage for next week. You:",
+          scenario: "An executive has 140 unread emails, a 2:00 PM keynote to rehearse, and a critical bug affecting paying subscribers. Instead of answering trivial calendar invites, she puts her phone on 'Do Not Disturb' and fixes the subscriber bug first. She knew how to:",
           options: [
-            "Prioritized guest-facing spaces.",
-            "Exacerbated the house.",
-            "Rebutted the chores."
-          ],
-          correctIndex: 0,
-          explanation: "'Prioritize' means ranking tasks by urgency or impact and executing them first."
+            "Circumvent all work duties.",
+            "Streamline the internet connection.",
+            "Prioritize the highest-urgency, highest-impact problem above secondary trivialities.",
+            "Reiterate her email inbox count."
+],
+          correctIndex: 2,
+          explanation: "'Prioritize' means to determine the order of dealing with items or tasks according to their relative importance."
         },
         writingPrompt: "Write a sentence declaring your single highest priority for personal growth this year."
       },
@@ -2208,14 +2287,15 @@ const VOCAB_PACKS = [
           "Ask a team member: 'How and when do we plan to implement this?'"
         ],
         practiceQuestion: {
-          scenario: "After talking for months about wanting to save money, a couple sets up an automated monthly transfer of $200 into a high-yield account. They have:",
+          scenario: "After six months of designing a new employee parental leave policy on paper, the executive leadership team issues the official handbook change, updates the HR payroll system, and begins paying claims on Monday. The leadership team officially began to:",
           options: [
-            "Implemented their savings plan.",
-            "Demurred on saving.",
-            "Been ambivalent about money."
-          ],
-          correctIndex: 0,
-          explanation: "'Implement' means executing a deliberate strategy and turning concepts into working reality."
+            "Circumvent employee benefits.",
+            "Orchestrate a cancellation of leave.",
+            "Leverage the policy to fire workers.",
+            "Implement the newly approved policy, transitioning from abstract planning into active, real-world execution."
+],
+          correctIndex: 3,
+          explanation: "'Implement' means to put a decision, plan, policy, or agreement into practical effect or execution."
         },
         writingPrompt: "Write about one healthy routine you successfully implemented into your life."
       }
@@ -2242,14 +2322,15 @@ const VOCAB_PACKS = [
           "Use 'specious logic' when calling out an argument that doesn't add up."
         ],
         practiceQuestion: {
-          scenario: "A fitness guru claims that drinking lemon water at 5:00 AM burns 800 calories without exercise because 'the acid melts body fat'. That claim is:",
+          scenario: "A salesman claims: 'Every billionaire drinks water; our branded mineral water costs $80 a bottle, so drinking it will make you a billionaire.' While the statement sounds superficially clever in the commercial, any logical thinker recognizes the claim as:",
           options: [
-            "Specious and unscientific.",
-            "Astute and tenable.",
-            "Sanguine and resilient."
-          ],
-          correctIndex: 0,
-          explanation: "'Specious' characterizes statements that seem appealingly plausible on the surface but are fundamentally false."
+            "Infallible logic supported by scientific proof.",
+            "A pragmatic and tenable financial investment.",
+            "Specious—superficially plausible or enticing on the surface, but actually misleading, illogical, and false.",
+            "An intrinsic law of modern economics."
+],
+          correctIndex: 2,
+          explanation: "'Specious' describes an argument, claim, or reasoning that looks superficially attractive or sound, but is actually deceptive, wrong, or hollow."
         },
         writingPrompt: "Write a sentence exposing a specious argument you heard recently."
       },
@@ -2269,14 +2350,15 @@ const VOCAB_PACKS = [
           "Always strive to be candid rather than disingenuous in disagreements."
         ],
         practiceQuestion: {
-          scenario: "A politician who voted in favor of a bill last week holds a press conference expressing shock and outrage that the bill was enacted. Their outrage is:",
+          scenario: "A manager who spent the previous weekend planning layoffs walks into a staff meeting and says: 'I was totally shocked when corporate told me about the budget cuts this morning!' Knowing he personally drafted the severance list, his employees find his performance offensively:",
           options: [
-            "Disingenuous.",
-            "Fastidious.",
-            "Dispassionate."
-          ],
+            "Disingenuous, pretending to be innocent and ignorant while concealing the truth.",
+            "Candid, sharing his heartfelt surprises with radical transparency.",
+            "Infallible, demonstrating deep moral perfection.",
+            "Specious in its grammatical phrasing."
+],
           correctIndex: 0,
-          explanation: "'Disingenuous' describes calculated insincerity, often feigning naivety or surprise."
+          explanation: "'Disingenuous' describes someone who is insincere, deceitful, or untruthful, often by feigning ignorance or pretending to know less than they actually do."
         },
         writingPrompt: "Write a sentence calling out a disingenuous excuse while remaining calm and composed."
       },
@@ -2296,14 +2378,15 @@ const VOCAB_PACKS = [
           "Use 'fallible' when reminding someone not to put heroes on pedestals."
         ],
         practiceQuestion: {
-          scenario: "A world-renowned chess grandmaster blunders a rook in a casual exhibition match. This proves that:",
+          scenario: "Even the most experienced commercial airplane pilots, software architects, and world-class heart surgeons are vulnerable to fatigue, cognitive bias, and miscalculation under extreme stress. Medical schools remind students that all humans are inherently:",
           options: [
-            "Even masters are fallible.",
-            "The chessboard was untenable.",
-            "Chess is arbitrary."
-          ],
-          correctIndex: 0,
-          explanation: "'Fallible' means liable to err, reminding us that no human is immune to mistakes."
+            "Infallible when they graduate top of their class.",
+            "Disingenuous toward their patients.",
+            "Dogmatic about medical equipment.",
+            "Fallible, capable of making mistakes, exercising poor judgment, or committing errors."
+],
+          correctIndex: 3,
+          explanation: "'Fallible' means capable of making mistakes, being wrong, or committing errors."
         },
         writingPrompt: "Write a sentence reflecting on how acknowledging that we are fallible fosters empathy."
       },
@@ -2323,14 +2406,15 @@ const VOCAB_PACKS = [
           "Test a process to find where its supposed 'infallibility' breaks down."
         ],
         practiceQuestion: {
-          scenario: "A software vendor claims their automated code tester catches 100% of all software bugs with zero exceptions forever. You remain skeptical because:",
+          scenario: "A software company advertises that their new artificial intelligence algorithm has 'zero bugs, zero false positives, and never makes a single diagnostic error under any conditions.' A senior computer scientist scoffs, remarking that no algorithmic system is:",
           options: [
-            "No software tool is infallible.",
-            "The vendor is too gregarious.",
-            "The code is poignant."
-          ],
-          correctIndex: 0,
-          explanation: "'Infallible' means completely incapable of error, a standard that practically nothing meets."
+            "Fallible enough to use in hospitals.",
+            "Infallible, incapable of error or failure in every conceivable edge case.",
+            "Dogmatic about patient records.",
+            "Skeptical of machine learning."
+],
+          correctIndex: 1,
+          explanation: "'Infallible' means incapable of making mistakes, erring, or failing; completely unfailing and certain."
         },
         writingPrompt: "Write a sentence reminding yourself or a teammate that no plan is infallible."
       },
@@ -2350,14 +2434,15 @@ const VOCAB_PACKS = [
           "Notice when someone is defending a position dogmatically rather than logically."
         ],
         practiceQuestion: {
-          scenario: "A music fan insists that any song produced after 1989 is automatically garbage, refusing to even listen to any modern album. Their view is:",
+          scenario: "An author refuses to engage in any debate, listen to contradictory archaeological evidence, or read peer reviews, declaring: 'My book's timeline is the only holy truth, and anyone who questions a single date is a liar.' Historians dismiss him as hopelessly:",
           options: [
-            "Dogmatic and close-minded.",
-            "Dispassionate and objective.",
-            "Conciliatory and gentle."
-          ],
-          correctIndex: 0,
-          explanation: "'Dogmatic' means rigidly imposing an unyielding doctrine regardless of merit or fresh evidence."
+            "Skeptical of his own hypotheses.",
+            "Dogmatic, stubbornly asserting personal doctrines as incontrovertible facts without regard for evidence.",
+            "Articulate in explaining carbon-dating results.",
+            "Fallible because he invites critical debate."
+],
+          correctIndex: 1,
+          explanation: "'Dogmatic' describes someone who lays down principles as incontrovertibly true, arrogant in assertion without welcoming evidence or discussion."
         },
         writingPrompt: "Write a sentence showing how dogmatic thinking impedes creative problem-solving."
       },
@@ -2377,14 +2462,15 @@ const VOCAB_PACKS = [
           "Ask: 'What evidence would convince a skeptical observer?'"
         ],
         practiceQuestion: {
-          scenario: "An email claims you have won 10 million dollars from a lottery you never entered. You are rightly:",
+          scenario: "A stranger walks up to you at an airport baggage carousel and promises that if you wire $500 to his brother's crypto account, you will receive $10,000 in your bank account tomorrow morning. Having common sense, your reaction is deeply:",
           options: [
-            "Extremely skeptical of the email's legitimacy.",
-            "Complacent about your new wealth.",
-            "Enamored with the sender."
-          ],
+            "Skeptical, reserving trust and rightfully doubting the truth and honesty of the implausible claim.",
+            "Dogmatic about wiring money.",
+            "Extrinsic to human communication.",
+            "Infallible in your financial losses."
+],
           correctIndex: 0,
-          explanation: "'Skeptical' denotes prudent doubt and reserving belief until evidence is provided."
+          explanation: "'Skeptical' means having or expressing doubt, not easily convinced, and questioning questionable claims."
         },
         writingPrompt: "Write about a product or trend you were initially skeptical about before trying it."
       },
@@ -2404,14 +2490,15 @@ const VOCAB_PACKS = [
           "Distinguish between intrinsic worth and external validation."
         ],
         practiceQuestion: {
-          scenario: "A musician practices the cello for three hours every day simply because the sound brings them peace, not because they plan to sell records. Their motivation is:",
+          scenario: "A dedicated teacher stays three hours late every day not for bonus checks or public awards, but simply because seeing a child learn to read gives her profound personal joy and meaning. Her motivation is fundamentally:",
           options: [
-            "Intrinsic.",
-            "Extrinsic.",
-            "Specious."
-          ],
-          correctIndex: 0,
-          explanation: "'Intrinsic' describes value or motivation that originates from the inherent nature of the activity itself."
+            "Extrinsic, driven entirely by outside financial incentives.",
+            "Disingenuous and aimed at getting promoted.",
+            "Intrinsic, originating from within her own values, passion, and personal fulfillment.",
+            "Specious and harmful to academic standards."
+],
+          correctIndex: 2,
+          explanation: "'Intrinsic' means belonging naturally, essential, and originating from within rather than from external influences."
         },
         writingPrompt: "What is an activity that gives you pure intrinsic satisfaction regardless of any outcome?"
       },
@@ -2431,14 +2518,15 @@ const VOCAB_PACKS = [
           "Balance extrinsic incentives with intrinsic passion."
         ],
         practiceQuestion: {
-          scenario: "A child only cleans their bedroom because their parents pay them $5 every time they do it. The child's motivation is:",
+          scenario: "A professional athlete admits that while he no longer loves running or competition, he continues training exclusively for multi-million-dollar sneaker endorsement contracts and trophy bonuses. His current motivation is almost entirely:",
           options: [
-            "Extrinsic.",
-            "Intrinsic.",
-            "Fastidious."
-          ],
-          correctIndex: 0,
-          explanation: "'Extrinsic' describes influences, pressures, or rewards originating outside the core person or task."
+            "Intrinsic, fueled solely by pure spiritual joy for athletics.",
+            "Dogmatic about physical fitness.",
+            "Infallible in its ethical purity.",
+            "Extrinsic, driven by external rewards, financial payouts, and outside pressures rather than internal passion."
+],
+          correctIndex: 3,
+          explanation: "'Extrinsic' means not part of the essential nature of something; originating from or driven by outside influences, rewards, or conditions."
         },
         writingPrompt: "Write a sentence showing how extrinsic rewards can sometimes distract from intrinsic purpose."
       },
@@ -2458,14 +2546,15 @@ const VOCAB_PACKS = [
           "Dismiss unwarranted gossip or worry."
         ],
         practiceQuestion: {
-          scenario: "A tenant complains to the landlord when the building's heat breaks down in the middle of a sub-zero blizzard. The tenant's complaint was:",
+          scenario: "After a sudden category-5 hurricane warning is issued for a coastal town, the governor orders a mandatory evacuation of low-lying beach zones. While some tourists complain about ruined vacations, safety experts confirm the drastic order was completely:",
           options: [
-            "Entirely warranted.",
-            "Wholly untenable.",
-            "Capricious and arbitrary."
-          ],
-          correctIndex: 0,
-          explanation: "'Warranted' signifies that an action or feeling is well-founded, reasonable, and fully justified."
+            "Disingenuous and fabricated by hotel owners.",
+            "Specious because hurricanes are never wet.",
+            "Warranted, fully justified, necessary, and proportionate to the catastrophic storm surge danger.",
+            "Dogmatic without meteorological data."
+],
+          correctIndex: 2,
+          explanation: "'Warranted' means justified, necessary, appropriate, or officially backed by sound reason and evidence."
         },
         writingPrompt: "Write a sentence validating a colleague's concern as being completely warranted."
       },
@@ -2485,14 +2574,15 @@ const VOCAB_PACKS = [
           "Describe someone's level-headed lifestyle as guided by pragmatism."
         ],
         practiceQuestion: {
-          scenario: "Instead of arguing endlessly about the theoretical merits of two coding styles, the team leader tests both on a staging branch to see which runs faster. That is:",
+          scenario: "Instead of arguing whether a controversial tax law is philosophically pure or theoretically perfect according to 18th-century textbooks, a governor assesses it by whether it actually fixes local roads, funds schools, and creates jobs. Her governing philosophy is grounded in:",
           options: [
-            "Pragmatism in action.",
-            "Dogmatic theory.",
-            "An arbitrary whim."
-          ],
-          correctIndex: 0,
-          explanation: "'Pragmatism' evaluates ideas and procedures based strictly on observable, practical utility."
+            "Dogmatism that ignores all voter feedback.",
+            "Specious reasoning designed to confuse drivers.",
+            "Extrinsic hatred of economics.",
+            "Pragmatism—evaluating ideas, policies, and beliefs strictly by the practical success of their real-world outcomes."
+],
+          correctIndex: 3,
+          explanation: "'Pragmatism' is an approach that assesses the truth, validity, or value of theories and policies by the practical success of their real-world application."
         },
         writingPrompt: "Write about a situation where pure pragmatism solved a problem that idealism couldn't."
       }
@@ -2519,14 +2609,15 @@ const VOCAB_PACKS = [
           "Notice when an analogy is truly apt versus stretched."
         ],
         practiceQuestion: {
-          scenario: "Someone describes a crowded subway car in summer as 'a moving sauna with neckties'. That description was:",
+          scenario: "During a tense debate about urban gridlock, a speaker remarks: 'Adding more highway lanes to cure traffic is like loosening your belt to cure obesity.' The audience bursts into applause because the metaphor was exceptionally:",
           options: [
-            "Hilariously apt.",
-            "Untenable and equivocal.",
-            "Disingenuous and reticent."
-          ],
-          correctIndex: 0,
-          explanation: "'Apt' means remarkably fitting, felicitous, and well-suited to the circumstance."
+            "Colloquial and completely incomprehensible.",
+            "Apt, striking the exact right note of appropriateness, relevance, and sharp fitting precision.",
+            "Specious and without any wit.",
+            "Nonchalant about driver safety."
+],
+          correctIndex: 1,
+          explanation: "'Apt' means appropriate, suitable, or fitting in the circumstances; especially suited to the moment."
         },
         writingPrompt: "Write an apt comparison for what a slow Wi-Fi connection feels like in 2026."
       },
@@ -2546,14 +2637,15 @@ const VOCAB_PACKS = [
           "Describe a memorable proverb as 'pithy'."
         ],
         practiceQuestion: {
-          scenario: "When asked the secret to longevity, a 100-year-old smiles and says: 'Keep breathing and avoid boring people.' That advice was:",
+          scenario: "When asked by an interviewer for his secret to fifty years of business success, a legendary investor doesn't give a 45-minute lecture; he simply smiles and says: 'Rule 1: Never lose money. Rule 2: Never forget Rule 1.' The quote became famous for being so:",
           options: [
-            "Pithy and memorable.",
-            "Dogmatic and rambling.",
-            "Superficial and tenuous."
-          ],
-          correctIndex: 0,
-          explanation: "'Pithy' denotes language that is concise, witty, and packed with substance."
+            "Colloquial and overly verbose.",
+            "Disingenuous and rambling.",
+            "Arbitrary and impossible to remember.",
+            "Pithy—brief, forceful, concise, and packed with memorable substance."
+],
+          correctIndex: 3,
+          explanation: "'Pithy' means concise, forcefully expressive, and brief yet full of vigorous meaning."
         },
         writingPrompt: "Write a pithy piece of life advice in seven words or fewer."
       },
@@ -2573,14 +2665,15 @@ const VOCAB_PACKS = [
           "Deliver an eloquent word of gratitude to someone who helped you."
         ],
         practiceQuestion: {
-          scenario: "A defense attorney delivers a closing statement that weaves law, history, and human compassion into a breathtaking 15-minute argument. The attorney was:",
+          scenario: "At an international peace summit, an ambassador steps to the podium without notes and delivers a moving address that weaves together historical poetry, moral conviction, and compelling logic, bringing delegates to their feet in a standing ovation. Her speech was undeniably:",
           options: [
-            "Eloquent.",
-            "Capricious.",
-            "Specious."
-          ],
+            "Eloquent, expressing complex ideas with fluid grace, persuasive power, and emotional resonance.",
+            "Colloquial and filled with teenage street slang.",
+            "Nonchalant about world affairs.",
+            "Pithy because she spoke for two hours straight."
+],
           correctIndex: 0,
-          explanation: "'Eloquent' denotes mastery of moving, persuasive, and beautifully constructed expression."
+          explanation: "'Eloquent' means fluent, graceful, and persuasively powerful in speaking or writing."
         },
         writingPrompt: "Write an eloquent two-sentence thank-you note to an inspiring teacher or friend."
       },
@@ -2600,14 +2693,15 @@ const VOCAB_PACKS = [
           "Notice how good-natured banter lifts the energy of a room."
         ],
         practiceQuestion: {
-          scenario: "Two longtime friends tease each other about their high school hairstyles while laughing over coffee. That conversation is:",
+          scenario: "Two veteran coworkers who have been desk neighbors for a decade trade rapid, witty jibes about each other's terrible coffee choices and football teams while chuckling over spreadsheets. Their warm, friendly dialogue is a classic example of:",
           options: [
-            "Good-natured banter.",
-            "Volatile discord.",
-            "A specious argument."
-          ],
-          correctIndex: 0,
-          explanation: "'Banter' denotes warm, playful, and quick-witted verbal sparring between people."
+            "Dogmatic litigation.",
+            "Disingenuous harassment.",
+            "Banter—lighthearted, playful, and friendly verbal teasing between companions.",
+            "Eloquent diplomacy at the United Nations."
+],
+          correctIndex: 2,
+          explanation: "'Banter' refers to the playful, good-humored, and friendly exchange of teasing remarks."
         },
         writingPrompt: "Write a two-line snippet of playful banter between two friends deciding what movie to watch."
       },
@@ -2627,14 +2721,15 @@ const VOCAB_PACKS = [
           "Use 'colloquial expression' when explaining a local idiom."
         ],
         practiceQuestion: {
-          scenario: "Saying 'I gotta hit the hay' instead of 'I intend to retire to bed' is an example of:",
+          scenario: "While drafting a formal legal brief for the Supreme Court, a young lawyer writes 'the defendant got totally busted by the cops.' The senior partner red-lines the sentence and explains that this phrasing is far too:",
           options: [
-            "Colloquial phrasing.",
-            "Dogmatic doctrine.",
-            "Fastidious syntax."
-          ],
+            "Colloquial, belonging to informal everyday street speech rather than formal judicial writing.",
+            "Eloquent and sophisticated for legal documents.",
+            "Pithy and dignified.",
+            "Dogmatic in its legal precision."
+],
           correctIndex: 0,
-          explanation: "'Colloquial' refers to informal, everyday conversational idioms rather than rigid formal prose."
+          explanation: "'Colloquial' refers to words, phrases, or idioms used in ordinary, informal, or familiar conversation, not in formal or academic speech."
         },
         writingPrompt: "What is your favorite colloquial phrase from your native region and what does it mean?"
       },
@@ -2654,14 +2749,15 @@ const VOCAB_PACKS = [
           "Compliment someone's stylish panache."
         ],
         practiceQuestion: {
-          scenario: "A bartender spins a shaker in mid-air, catches it behind their back, and pours a cocktail with a dazzling smile. The bartender has:",
+          scenario: "A world-renowned pianist walks onto the Carnegie Hall stage in a midnight-velvet blazer, winks at the conductor, and plays a dizzying Rachmaninoff concerto with effortless flair, dramatic physical showmanship, and magnetic confidence. The reviewer raves about his:",
           options: [
-            "Panache.",
-            "Inertia.",
-            "Complacency."
-          ],
-          correctIndex: 0,
-          explanation: "'Panache' denotes an exuberant, confident, and stylish manner of execution."
+            "Colloquial posture.",
+            "Nonchalant indifference to the piano keys.",
+            "Fastidious hatred of classical music.",
+            "Panache—a flamboyant, spirited confidence of style, manner, and swagger."
+],
+          correctIndex: 3,
+          explanation: "'Panache' means flamboyant confidence of style, dashing manner, and distinctive swagger."
         },
         writingPrompt: "Describe someone you know who carries themselves with effortless panache."
       },
@@ -2681,14 +2777,15 @@ const VOCAB_PACKS = [
           "Notice how silence can convey more gravitas than shouting."
         ],
         practiceQuestion: {
-          scenario: "A veteran judge enters a chaotic courtroom, sits in silence for five seconds, and speaks in a measured, calm baritone that makes everyone immediately cease bickering. The judge possesses:",
+          scenario: "During a national emergency broadcast, a veteran news anchor lowers his voice, speaks slowly with measured dignity, and delivers the solemn evacuation instructions with commanding seriousness. The broadcast carried immense:",
           options: [
-            "Gravitas.",
-            "Panache alone.",
-            "Capriciousness."
-          ],
-          correctIndex: 0,
-          explanation: "'Gravitas' signifies a dignified weight and quiet authority that commands innate respect."
+            "Banter that relaxed the nation.",
+            "Gravitas—a dignified, serious, and weighty presence that commands profound respect.",
+            "Panache that made everyone dance.",
+            "Colloquial slang that felt like casual gossip."
+],
+          correctIndex: 1,
+          explanation: "'Gravitas' means dignity, seriousness, solemnity, and weight of manner that commands deep respect."
         },
         writingPrompt: "Write a sentence describing what physical cues give a speaker natural gravitas."
       },
@@ -2708,14 +2805,15 @@ const VOCAB_PACKS = [
           "Describe an unfazed reaction as nonchalant."
         ],
         practiceQuestion: {
-          scenario: "A waiter trips slightly, catches three wine glasses on a tray without spilling a single drop, winks at the table, and continues walking smoothly. The waiter was:",
+          scenario: "While turbulence violently shakes an airplane and passengers grip their seats in terror, a veteran flight attendant calmly sips a glass of sparkling water, checks a manifest, and smiles casually at a row of passengers, looking completely:",
           options: [
-            "Nonchalant.",
-            "Apprehensive.",
-            "Untenable."
-          ],
-          correctIndex: 0,
-          explanation: "'Nonchalant' describes a calm, relaxed, and composed manner under pressure."
+            "Apprehensive and trembling in fear.",
+            "Pensive about aircraft mechanics.",
+            "Nonchalant, appearing casually calm, unconcerned, and utterly unfazed by the commotion.",
+            "Gravitas in her physical posture."
+],
+          correctIndex: 2,
+          explanation: "'Nonchalant' means feeling or appearing casually calm, relaxed, and not displaying anxiety, interest, or enthusiasm."
         },
         writingPrompt: "Write about a situation where acting nonchalant helped calm down the people around you."
       },
@@ -2735,14 +2833,15 @@ const VOCAB_PACKS = [
           "Notice how self-deprecating wit disarms tension."
         ],
         practiceQuestion: {
-          scenario: "A master chef drops an egg on the floor, laughs, and tells the workshop: 'Well, that's why my dog loves being my assistant.' That comment was:",
+          scenario: "A Nobel Prize-winning scientist begins her commencement address by saying: 'I am honored to stand before you today—especially since my daughter reminded me this morning that I still can't figure out how to program our microwave oven.' The audience laughs at her charmingly:",
           options: [
-            "Charmingly self-deprecating.",
-            "Dogmatic and bitter.",
-            "Specious and evasive."
-          ],
-          correctIndex: 0,
-          explanation: "'Self-deprecating' refers to lighthearted, modest humor directed at one's own foibles."
+            "Dogmatic arrogance about kitchen appliances.",
+            "Self-deprecating humor, modestly and amusingly making fun of her own human shortcomings.",
+            "Disingenuous ignorance of microwaves.",
+            "Colloquial anger toward technology."
+],
+          correctIndex: 1,
+          explanation: "'Self-deprecating' describes being modest about or humorously critical of oneself, poking fun at one's own quirks or flaws."
         },
         writingPrompt: "Write a lighthearted self-deprecating remark about a silly habit of yours."
       },
@@ -2762,14 +2861,15 @@ const VOCAB_PACKS = [
           "Notice when someone's intuition is uncanny in its accuracy."
         ],
         practiceQuestion: {
-          scenario: "You think of an obscure song you haven't heard in 12 years, and 30 seconds later the coffee shop radio starts playing that exact song. That coincidence was:",
+          scenario: "You meet a stranger on a train in Switzerland who has the exact same birthmark as you, knows the same obscure childhood lullaby your grandmother sang, and even shares your rare middle name. The resemblance and knowledge felt almost:",
           options: [
-            "Uncanny.",
-            "Pragmatic.",
-            "Extrinsic."
-          ],
-          correctIndex: 0,
-          explanation: "'Uncanny' captures an eerie, mysterious, and strikingly accurate or strange event."
+            "Nonchalant and predictable.",
+            "Colloquial and ordinary.",
+            "Uncanny—strange, mysterious, and eerily beyond normal explanation.",
+            "Pithy and easily dismissed."
+],
+          correctIndex: 2,
+          explanation: "'Uncanny' means strange or mysterious, especially in an unsettling, eerie, or strikingly coincidental way."
         },
         writingPrompt: "Write about an uncanny coincidence you experienced in your life."
       }
