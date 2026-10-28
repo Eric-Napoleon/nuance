@@ -72,18 +72,26 @@ const App = {
   },
 
   applyTheme() {
-    if (this.state.theme === 'light') {
-      document.documentElement.classList.add('light-theme');
-    } else {
-      document.documentElement.classList.remove('light-theme');
+    const isLight = this.state.theme === 'light';
+    document.documentElement.classList.toggle('light-theme', isLight);
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.setAttribute('content', isLight ? '#f8fafc' : '#0a0d14');
+    }
+  },
+
+  setTheme(themeName) {
+    this.state.theme = themeName;
+    this.applyTheme();
+    this.saveState();
+    this.renderHeader();
+    if (this.state.activeTab === 'vault') {
+      this.renderVault();
     }
   },
 
   toggleTheme() {
-    this.state.theme = this.state.theme === 'dark' ? 'light' : 'dark';
-    this.applyTheme();
-    this.saveState();
-    this.renderHeader();
+    this.setTheme(this.state.theme === 'dark' ? 'light' : 'dark');
   },
 
   getCurrentPack() {
@@ -168,7 +176,7 @@ const App = {
     const packBtn = document.getElementById('pack-selector-btn');
     if (packBtn) {
       const pack = this.getCurrentPack();
-      packBtn.innerHTML = `<span>Day ${pack.id} of 10</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+      packBtn.innerHTML = `<span>Day ${pack.id}</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
     }
 
     const themeBtn = document.getElementById('theme-toggle-btn');
@@ -802,7 +810,29 @@ const App = {
 
       <!-- Settings & Backup Footer -->
       <div class="vault-settings-box">
-        <h3>App Management</h3>
+        <h3>App Settings</h3>
+
+        <div class="settings-group">
+          <div class="settings-label">Theme & Appearance</div>
+          <div class="theme-switch-group">
+            <button class="theme-option-btn ${this.state.theme === 'dark' ? 'active' : ''}" onclick="App.setTheme('dark')">
+              <span>🌙 Dark Mode</span>
+            </button>
+            <button class="theme-option-btn ${this.state.theme === 'light' ? 'active' : ''}" onclick="App.setTheme('light')">
+              <span>☀️ Light Mode</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <div class="settings-label">Offline Commute Status</div>
+          <div class="offline-status-card">
+            <span class="status-dot"></span>
+            <span>100% Offline Ready (All 100 words, Web Speech pronunciation, drills, & quizzes work without Wi-Fi/cellular)</span>
+          </div>
+        </div>
+
+        <div class="settings-label">Data & Device</div>
         <div class="settings-btns-row">
           <button class="action-btn-secondary" onclick="App.exportData()">Export Data (JSON)</button>
           <button class="action-btn-secondary" onclick="App.showInstallHelp()">Install to Phone 📱</button>
