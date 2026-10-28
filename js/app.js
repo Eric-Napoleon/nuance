@@ -173,12 +173,6 @@ const App = {
     const streakEl = document.getElementById('streak-count');
     if (streakEl) streakEl.textContent = this.state.streak;
 
-    const packBtn = document.getElementById('pack-selector-btn');
-    if (packBtn) {
-      const pack = this.getCurrentPack();
-      packBtn.innerHTML = `<span>Day ${pack.id}</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
-    }
-
     const themeBtn = document.getElementById('theme-toggle-btn');
     if (themeBtn) {
       themeBtn.innerHTML = this.state.theme === 'dark' 
@@ -196,8 +190,8 @@ const App = {
     const container = document.getElementById('view-daily');
     if (!container) return;
 
-    // Build Word Stepper / Pagination
-    const dotsHtml = pack.words.map((w, idx) => {
+    // Build Word Stepper / Segmented Progress
+    const segmentsHtml = pack.words.map((w, idx) => {
       const isCurrent = idx === this.state.currentWordIndex;
       const isMastered = this.state.learnedWords[w.id]?.mastered;
       const hasAnswered = this.state.learnedWords[w.id]?.drillAnswered;
@@ -206,8 +200,8 @@ const App = {
       else if (isMastered) statusClass = 'mastered';
       else if (hasAnswered) statusClass = 'completed';
 
-      return `<button class="stepper-dot ${statusClass}" onclick="App.goToWord(${idx})" title="${w.word}">
-        ${idx + 1}
+      return `<button class="progress-segment ${statusClass}" onclick="App.goToWord(${idx})" title="Word ${idx + 1}: ${w.word}">
+        <span>${idx + 1}</span>
       </button>`;
     }).join('');
 
@@ -215,16 +209,27 @@ const App = {
     const isMastered = !!wordData.mastered;
 
     container.innerHTML = `
-      <!-- Pack Header Subtitle -->
-      <div class="pack-banner">
-        <div class="pack-title">${pack.title}</div>
-        <div class="pack-sub">${pack.subtitle}</div>
-      </div>
+      <!-- Sleek Daily Dashboard Card -->
+      <div class="daily-dashboard-card">
+        <div class="dashboard-top-row">
+          <button class="day-badge-btn" onclick="App.showPackSelector()" title="Switch Pack">
+            <span>Day ${pack.id} of ${window.VOCAB_PACKS.length}</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="dashboard-progress-label">
+            <span>Word <strong class="active-word-num">${this.state.currentWordIndex + 1}</strong> of 10</span>
+          </div>
+        </div>
 
-      <!-- Stepper Progress Bar -->
-      <div class="stepper-wrapper">
-        <div class="stepper-dots">${dotsHtml}</div>
-        <div class="stepper-count">Word ${this.state.currentWordIndex + 1} of 10</div>
+        <div class="dashboard-pack-meta">
+          <h2 class="dashboard-pack-title">${pack.title.replace(/^Day \d+:\s*/i, '')}</h2>
+          <p class="dashboard-pack-sub">${pack.subtitle}</p>
+        </div>
+
+        <!-- 10 Word Segment Progress Bar -->
+        <div class="segmented-progress-bar">
+          ${segmentsHtml}
+        </div>
       </div>
 
       <!-- Main Word Card -->
